@@ -45,15 +45,40 @@ $(function () {
 
   let langVal = $('body').hasClass('rtl') ? true : false; 
 
-  $(".testimonial-carousel").owlCarousel({
+  $("#banner .banner-carousel, .second-banner-carousel").owlCarousel({
     rtl: langVal,
     items: 1,
-    dots: true,
+    dots: false,
     nav: true,
     autoplay: true,
     autoplayHoverPause: true,
     loop: true,
-    navText: ["<span><i class='fas fa-arrow-left'></i></span>","<span><i class='fas fa-arrow-right'></i></span>"],
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
+  });
+
+  $("#specific-offers .specific-offers-carousel").owlCarousel({
+    rtl: langVal,
+    dots: false,
+    nav: true,
+    loop: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    margin: 20,
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
+    responsive: {
+      0: {
+          items: 1.5,
+      },
+      576: {
+          items: 3.5,
+      },
+      768: {
+          items: 4.5,
+      },
+      992: {
+          items: 6.5,
+      },
+    },
   });
 
   /* Initialize animation on scroll */
