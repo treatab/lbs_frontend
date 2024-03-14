@@ -45,7 +45,7 @@ $(function () {
 
   let langVal = $('body').hasClass('rtl') ? true : false; 
 
-  $("#banner .banner-carousel, .second-banner-carousel").owlCarousel({
+  $("#banner .banner-carousel").owlCarousel({
     rtl: langVal,
     items: 1,
     dots: false,
@@ -56,11 +56,11 @@ $(function () {
     navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
   });
 
-  $("#specific-offers .specific-offers-carousel").owlCarousel({
+  $("#specific-offers .specific-offers-carousel, #latest-offers .specific-offers-carousel").owlCarousel({
     rtl: langVal,
     dots: false,
-    nav: true,
-    loop: true,
+    nav: false,
+    loop: false,
     autoplay: true,
     autoplayHoverPause: true,
     margin: 20,
@@ -76,9 +76,20 @@ $(function () {
           items: 4.5,
       },
       992: {
-          items: 6.5,
+          items: 5.5,
       },
     },
+  });
+
+  $(".second-banner-carousel").owlCarousel({
+    rtl: langVal,
+    items: 1,
+    dots: false,
+    nav: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    loop: true,
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
   });
 
   /* Initialize animation on scroll */
