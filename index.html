@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="LBS">
@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
     <!-- For Arabic version -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -22,12 +22,12 @@
   
 </head>
 <body class="rtl"> <!-- En version remove class="rtl" -->
-    <header>
+    <section id="header" class="d-none d-lg-block">
         <div class="top-header">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-between top-content">
                     <div class="d-flex align-items-center gap-3 address">
-                        <div class="d-flex align-items-center gap-3 address">
+                        <div class="d-flex align-items-center gap-3">
                             <i class="fas fa-location-dot"></i>
                             <p class="mb-0">
                                 <span class="text-darkGray">التوصيل الي <i class="fas fa-chevron-down ms-1"></i></span>
@@ -57,9 +57,22 @@
                         </div>
                         <div class="before-login">
                             <span class="icon me-1"><i class="far fa-user"></i></span>
-                            <a href="#"><span>تسجيل الدخول</span></a>
+                            <a href="login.html"><span>تسجيل الدخول</span></a>
                             <span>|</span>
-                            <a href="#"><span>انشاء حساب</span></a>
+                            <a href="register.html"><span>انشاء حساب</span></a>
+                        </div>
+                        <div class="after-login d-none">
+                            <div class="user-account">
+                                <span class="icon me-1"><i class="far fa-user"></i></span>
+                                <div class="dropdown">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">الملف الشخصي</a></li>
+                                        <li><a href="#">العناوين</a></li>
+                                        <li><a href="#">الطلبات</a></li>
+                                        <li><a href="#">تسجيل الخروج</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,8 +106,86 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="mobile-header" class="d-lg-none">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between top-content">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="toggle-menu menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.svg" class="logo" alt="Logo" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="top-options d-flex align-items-center gap-3">
+                    <div class="lang">
+                        <img src="assets/images/sa-logo.svg" alt="lang image">
+                        <span>AR</span>
+                    </div>
+                    <div class="notify">
+                        <a href="#"><i class="far fa-bell"></i></a>
+                    </div>
+                    <div class="wishlist">
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="cart">
+                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="البحث باسم المنتجات . البراندات ..." aria-label="text" aria-describedby="addon-wrapping">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="address">
+            <div class="container">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fas fa-location-dot"></i>
+                    <p class="mb-0">
+                        <span class="d-block details">المنصورة , حي الجامعه</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="main-menu">
+            <ul class="list-unstyled mb-0">
+                <li><a href="#" class="active"> <span>الرئيسية</span></a></li>
+                <li><a href="#" class="text-red"><span>أحدث العروض</span></a></li>
+                <li><a href="#"><span>أحدث المنتجات</span></a></li>
+                <li><a href="#"><span>التيشرتات</span></a></li>
+                <li><a href="#"><span>البناطيل</span></a></li>
+                <li><a href="#"><span>بلوزات</span></a></li>
+                <li><a href="#"><span>شربات</span></a></li>
+                <li><a href="#"><span>التيشرتات</span></a></li>
+                <li><a href="#"><span>البناطيل</span></a></li>
+                <li><a href="#"><span>بلوزات</span></a></li>
+                <li><a href="#"><span>شربات</span></a></li>
+            </ul>
+            <div class="before-login">
+                <ul class="list-unstyled mb-0">
+                    <li><a href="login.html"><span>تسجيل الدخول</span></a></li>
+                    <li><a href="register.html"><span>انشاء حساب</span></a></li>
+                </ul>
+            </div>
+            <div class="after-login d-none">
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#">الملف الشخصي</a></li>
+                    <li><a href="#">العناوين</a></li>
+                    <li><a href="#">الطلبات</a></li>
+                    <li><a href="#">تسجيل الخروج</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="overlay"></div>
-    </header>
+    </section>
     <div id="main-wrapper">
         <div id="banner" class="pt-2">
             <div class="container">
@@ -119,9 +210,12 @@
                             <div class="img">
                                 <img src="assets/images/cat-img1.png" alt="category image" class="img-fluid">
                             </div>
-                            <div class="content-txt">
+                            <div class="content-txt d-none d-md-block">
                                 <h5 class="title"><a href="#">ملابس أطفال</a></h5>
                                 <a href="#" class="btn btn-more" > أكتشف المزيد </a>
+                            </div>
+                            <div class="content-txt d-md-none">
+                                <a href="#" class="btn btn-more" >ملابس أطفال</a>
                             </div>
                         </div>
                     </div>
@@ -130,9 +224,12 @@
                             <div class="img">
                                 <img src="assets/images/cat-img2.png" alt="category image" class="img-fluid">
                             </div>
-                            <div class="content-txt">
+                            <div class="content-txt d-none d-md-block">
                                 <h5 class="title"><a href="#">ملابس رجالية</a></h5>
                                 <a href="#" class="btn btn-more" > أكتشف المزيد </a>
+                            </div>
+                            <div class="content-txt d-md-none">
+                                <a href="#" class="btn btn-more">ملابس رجالية</a>
                             </div>
                         </div>
                     </div>
@@ -141,9 +238,12 @@
                             <div class="img">
                                 <img src="assets/images/cat-img3.png" alt="category image" class="img-fluid">
                             </div>
-                            <div class="content-txt">
+                            <div class="content-txt d-none d-md-block">
                                 <h5 class="title"><a href="#">ملابس نسائية</a></h5>
                                 <a href="#" class="btn btn-more" > أكتشف المزيد </a>
+                            </div>
+                            <div class="content-txt d-md-none">
+                                <a href="#" class="btn btn-more">ملابس نسائية</a>
                             </div>
                         </div>
                     </div>
@@ -159,9 +259,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -170,9 +270,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -181,9 +281,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -192,9 +292,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -203,9 +303,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -214,9 +314,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -225,9 +325,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -236,9 +336,9 @@
                             <div class="img">
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
-                            <div class="pro-details mt-3">
-                                <h5>اسم المنتج</h5>
-                                <a href="#" class="btn btn-offer mt-2">2000 وأقل عروض رمضان</a>
+                            <div class="pro-details mt-2">
+                                <h5 class="pro-name">اسم المنتج</h5>
+                                <a href="#" class="btn btn-offer mt-1">2000 وأقل عروض رمضان</a>
                             </div>
                         </div>
                     </div>
@@ -260,11 +360,101 @@
                 </div>
             </div>
         </div>
-        <div id="var-offers">
+        <div id="var-offers" class="mt-3 mb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-
+                <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1"> <!-- row-cols-4 (4) number of card -->
+                    <div class="col mb-3 mb-lg-0">
+                        <div class="offer-card four-offers h-100">
+                            <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                            <div class="d-flex flex-wrap justify-content-center offers-list">
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 mb-lg-0">
+                        <div class="offer-card two-offers h-100">
+                            <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                            <div class="d-flex flex-wrap justify-content-center offers-list">
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 mb-lg-0">
+                        <div class="offer-card one-offers h-100">
+                            <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                            <div class="d-flex flex-wrap justify-content-center offers-list">
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 mb-lg-0">
+                        <div class="offer-card four-offers h-100">
+                            <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                            <div class="d-flex flex-wrap justify-content-center offers-list">
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                                <div class="offer mb-2">
+                                    <div class="img mb-1">
+                                        <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                    </div>
+                                    <p class="mb-0"> عنوان العرض</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,7 +472,7 @@
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
                             <div class="pro-details mt-2">
-                                <h5>بلوزه سوداء شبابيه</h5>
+                                <h5 class="pro-name">بلوزه سوداء شبابيه</h5>
                                 <p class="mb-2">نوع البراند</p>
                                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                                     <a href="#" class="btn btn-red text-white btn-discount">خصم 20 %</a>
@@ -297,7 +487,7 @@
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
                             <div class="pro-details mt-2">
-                                <h5>بلوزه سوداء شبابيه</h5>
+                                <h5 class="pro-name">بلوزه سوداء شبابيه</h5>
                                 <p class="mb-2">نوع البراند</p>
                                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                                     <a href="#" class="btn btn-red text-white btn-discount">خصم 20 %</a>
@@ -312,7 +502,7 @@
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
                             <div class="pro-details mt-2">
-                                <h5>بلوزه سوداء شبابيه</h5>
+                                <h5 class="pro-name">بلوزه سوداء شبابيه</h5>
                                 <p class="mb-2">نوع البراند</p>
                                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                                     <a href="#" class="btn btn-red text-white btn-discount">خصم 20 %</a>
@@ -327,7 +517,7 @@
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
                             <div class="pro-details mt-2">
-                                <h5>بلوزه سوداء شبابيه</h5>
+                                <h5 class="pro-name">بلوزه سوداء شبابيه</h5>
                                 <p class="mb-2">نوع البراند</p>
                                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                                     <a href="#" class="btn btn-red text-white btn-discount">خصم 20 %</a>
@@ -342,7 +532,7 @@
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
                             <div class="pro-details mt-2">
-                                <h5>بلوزه سوداء شبابيه</h5>
+                                <h5 class="pro-name">بلوزه سوداء شبابيه</h5>
                                 <p class="mb-2">نوع البراند</p>
                                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                                     <a href="#" class="btn btn-red text-white btn-discount">خصم 20 %</a>
@@ -357,7 +547,7 @@
                                 <img src="assets/images/pro-img.png" alt="product image">
                             </div>
                             <div class="pro-details mt-2">
-                                <h5>بلوزه سوداء شبابيه</h5>
+                                <h5 class="pro-name">بلوزه سوداء شبابيه</h5>
                                 <p class="mb-2">نوع البراند</p>
                                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                                     <a href="#" class="btn btn-red text-white btn-discount">خصم 20 %</a>
@@ -374,16 +564,16 @@
         <div id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="footer-logo">
+                    <div class="col-lg-3 mb-3 mb-lg-0">
+                        <div class="footer-logo text-center mb-3 text-lg-start">
                             <img src="assets/images/logo-white.svg" alt="logo image">
                         </div>
-                        <div class="contact-us">
-                            <div class="d-flex gap-2">
+                        <div class="contact-us d-lg-block d-flex align-items-center justify-content-between justify-content-sm-center gap-3">
+                            <div class="d-flex align-items-center gap-2 mb-lg-2">
                                 <span>01012345600</span>
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
-                            <div class="d-flex gap-2">
+                            <div class="d-flex align-items-center gap-2">
                                 <span>01012345600</span>
                                 <i class="fas fa-phone"></i>
                             </div>
@@ -391,15 +581,15 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="row">
-                            <div class="col-lg-3">
-                                <h3><span>اعرف المزيد هنا</span></h3>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>اعرف المزيد هنا</span></h5 class="text-primary fw-bold title">
                                 <ul>
                                     <li> <a href="#">معلومات عن الموقع</a> </li>
                                     <li> <a href="#">الوظائف</a> </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-3">
-                                <h3><span>تسوق معنا</span></h3>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>تسوق معنا</span></h5 class="text-primary fw-bold title">
                                 <ul>
                                     <li><a href="#">حسابك</a></li>
                                     <li><a href="#">مشترياتك</a></li>
@@ -407,8 +597,8 @@
                                     <li><a href="#">العناوين</a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-3">
-                                <h3><span>دعنا نساعدك</span></h3>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>دعنا نساعدك</span></h5 class="text-primary fw-bold title">
                                 <ul>
                                     <li><a href="#">الشروط والأحكام</a></li>
                                     <li><a href="#">سياسة الخصوصية</a></li>
@@ -416,8 +606,8 @@
                                     <li><a href="#">سياسة الاسترجاع</a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-3">
-                                <h3><span>كن شريكا معنا</span></h3>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>كن شريكا معنا</span></h5 class="text-primary fw-bold title">
                                 <ul>
                                     <li><a href="#">افكارك</a></li>
                                     <li><a href="#">المدونة</a></li>
@@ -431,14 +621,14 @@
         </div>
         <div id="copyright">
             <div class="container">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <ul class="social">
+                <div class="d-flex flex-wrap justify-content-center justify-content-sm-between align-items-center">
+                    <ul class="social list-unstyled d-flex align-items-center gap-3 mb-0">
                         <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
                     </ul>
-                    <p>حقوق الطبع والنشر © -2024 محفوظة </p>
+                    <p class="mb-0">حقوق الطبع والنشر © -2024 محفوظة </p>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 $(function () {
   ("use strict");
   //sticky-header
-  var header = $("header");
+  var header = $("#header");
   $(window).scrollTop() >= header.height()
     ? header.addClass("sticky-header").fadeIn("fast")
     : header.removeClass("sticky-header");
@@ -12,28 +12,42 @@ $(function () {
       : header.removeClass("sticky-header");
   });
   /* active link */
-  $("header .menuLinks li").click(function () {
+  $("#header .menuLinks li").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
 
   // toggle menu
-  $("header .toggle-menu").click(function () {
-    $(".overlay").css({
-      transform: "scaleX(1)",
-    });
-    $("#main-menu").animate({"left": '0'});
+  $("#mobile-header .toggle-menu").click(function () {
+    $(".overlay").css({ transform: "scaleX(1)", });
+    if ( $('body').hasClass('rtl') ) {
+      $("#mobile-header #main-menu").animate({"left": '0'});
+    } else{
+      $("#mobile-header #main-menu").animate({"right": '0'});
+    }
     $('body').addClass("stop-scroll");
   });
 
   $(".overlay").click(function () {
     $(this).removeAttr("style");
-    if($(window).width < 480){
-      $("#main-menu").animate({"left": '-200px'});
+    if ( $('body').hasClass('rtl') ) { 
+      $("#mobile-header #main-menu").animate({"left": '-200px'});
     } else{
-      $("#main-menu").animate({"left": '-300px'});
+      $("#mobile-header #main-menu").animate({"right": '-200px'});
     }
     $('body').removeClass("stop-scroll");
   });
+
+  $('.password-show').click(function(){
+    let passwordInput = $(this).closest('.form-input').find('input');
+    if(passwordInput.attr('type') == 'password'){
+        $(this).html('').append(`<i class="far fa-eye-slash"></i>`);
+        passwordInput.attr('type', 'text');
+    }
+    else {
+        $(this).html('').append(`<i class="far fa-eye"></i>`);
+        passwordInput.attr('type', 'password');
+    }
+  })
 
   //click to scroll top
   const scrollButton = $('#scrollTop');
@@ -67,13 +81,13 @@ $(function () {
     navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
     responsive: {
       0: {
-          items: 1.5,
+          items: 2.5,
       },
       576: {
-          items: 3.5,
+          items: 2.5,
       },
       768: {
-          items: 4.5,
+          items: 3.5,
       },
       992: {
           items: 5.5,
