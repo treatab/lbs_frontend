@@ -94,17 +94,126 @@ $(function () {
       },
     },
   });
+  $("#most-requested .most-requested-carousel").owlCarousel({
+    rtl: langVal,
+    dots: false,
+    nav: false,
+    loop: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    margin: 20,
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
+    responsive: {
+      0: {
+          items: 1.5,
+      },
+      576: {
+          items: 2.5,
+      },
+      768: {
+          items: 3.5,
+      },
+      992: {
+          items: 4.5,
+      },
+      1400: {
+        items: 5.5,
+      },
+    },
+  });
+
+  $("#brands .brands-carousel").owlCarousel({
+    rtl: langVal,
+    dots: false,
+    nav: false,
+    loop: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    margin: 20,
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
+    responsive: {
+      0: {
+        items: 3,
+      },
+      576: {
+        items: 4,
+      },
+      768: {
+        items: 6,
+      },
+      992: {
+        items: 8,
+      },
+      1200: {
+          items: 10,
+      },
+    },
+  });
 
   $(".second-banner-carousel").owlCarousel({
     rtl: langVal,
     items: 1,
     dots: false,
-    nav: false,
+    nav: true,
     autoplay: true,
     autoplayHoverPause: true,
     loop: true,
     navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
   });
+
+  // verification Code
+  const inputElements = [...document.querySelectorAll('input.code-input')]
+  inputElements.forEach((ele, index) => {
+      ele.addEventListener('keydown', (e) => {
+          // if the keycode is backspace & the current field is empty
+          // focus the input before the current. Then the event happens
+          // which will clear the "before" input box.
+          if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus()
+      })
+      ele.addEventListener('input', (e) => {
+          const [first, ...rest] = e.target.value
+          e.target.value = first ?? ''
+          const lastInputBox = index === inputElements.length - 1
+          const didInsertContent = first !== undefined
+          if (didInsertContent && !lastInputBox) {
+              // continue to input the rest of the string
+              inputElements[index + 1].focus()
+              inputElements[index + 1].value = rest.join('')
+              inputElements[index + 1].dispatchEvent(new Event('input'))
+          }
+      })
+  });
+
+  $('#login .sign-form .send-again').click(function() {
+    $(this).addClass('d-none');
+    var seconds = 60;
+    var countdown = setInterval(function() {
+      seconds--;
+      var minutes = Math.floor(seconds / 60);
+      var remainingSeconds = seconds % 60;
+  
+      if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;
+      }
+  
+      $("#login .sign-form #timer").text(minutes + ":" + remainingSeconds);
+  
+      if (seconds === 0) {
+        clearInterval(countdown);
+        $('#login .sign-form .send-again').removeClass('d-none');
+      }
+    }, 1000);
+  })
+
+
+  $(".rating").rating({
+    clearButton: '',
+    clearCaption: '',
+    'size': 'sm',
+    starCaptions: function (val) {
+        return '(' + val + ')';
+    }
+  }); 
 
   /* Initialize animation on scroll */
   function initiateAnimation() {
