@@ -5,7 +5,7 @@
     <meta name="description" content="LBS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forget Password</title>
+    <title>Addresses</title>
     <link rel="shortcut icon" href="assets/images/logo.svg">
     <!-- For English version -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
@@ -119,13 +119,13 @@
                         <div class="cart">
                             <a href="#"><i class="fas fa-cart-shopping"></i></a>
                         </div>
-                        <div class="before-login"> <!-- add class ="d-none" after login-->
+                        <div class="before-login d-none"> <!-- add class ="d-none" after login-->
                             <span class="icon me-1"><i class="far fa-user"></i></span>
                             <a href="login.html"><span>تسجيل الدخول</span></a>
                             <span>|</span>
                             <a href="register.html"><span>انشاء حساب</span></a>
                         </div>
-                        <div class="after-login d-none"> <!-- remove class ="d-none" after login-->
+                        <div class="after-login"> <!-- remove class ="d-none" after login-->
                             <div class="user-account">
                                 <div class="name">
                                     <span class="me-1"><img src="assets/images/user.png" alt="profile-image"></span>
@@ -276,21 +276,110 @@
         <div class="overlay"></div>
     </section>
     <div id="main-wrapper">
-        <div id="login">
+        <div id="addresses" class="py-4">
             <div class="container">
-                <div id="login-card" class="my-4">
-                    <div class="logo text-center mb-3">
-                        <img src="assets/images/logo.svg" alt="logo image">
+                <div id="list" data-aos="fade-in">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <h5 class="fw-bold">العناوين</h5>
+                        <a href="new-address.html" class="btn btn-primary">إضافه عنوان جديد</a>
                     </div>
-                    <div class="sign-form">
-                        <h5 class="fw-bold mb-3">نسيت كلمه المرور</h5>
-                        <form>
-                            <div class="form-input mb-3">
-                                <label class="form-label text-darkGray" for="phone-email">رقم الجوال / البريد الالكتروني</label>
-                                <input type="text" id="phone-email" class="form-control">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="address-card my-4">
+                                <div class="d-flex justify-content-between top-card">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="address" id="address-1" checked>
+                                        <label class="form-check-label" for="address-1">
+                                            عنوان المنزل
+                                        </label>
+                                    </div>
+                                    <div class="add-btns">
+                                        <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
+                                        <a href="#"><span><i class="far fa-trash-can"></i></span></a>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>العنوان</td>
+                                            <td>السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>رقم الموبايل </td>
+                                            <td> 12345546464</td>
+                                        </tr>
+                                        <tr>
+                                            <td>اسم المستخدم</td>
+                                            <td>رحمه ابراهيم</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <a href="resetpassword.html" class="btn btn-primary w-100">استمرار</a>
-                        </form>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="address-card my-4">
+                                <div class="d-flex justify-content-between top-card">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="address" id="address-2">
+                                        <label class="form-check-label" for="address-2">
+                                            عنوان المنزل
+                                        </label>
+                                    </div>
+                                    <div class="add-btns">
+                                        <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
+                                        <a href="#"><span><i class="far fa-trash-can"></i></span></a>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>العنوان</td>
+                                            <td>السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>رقم الموبايل </td>
+                                            <td> 12345546464</td>
+                                        </tr>
+                                        <tr>
+                                            <td>اسم المستخدم</td>
+                                            <td>رحمه ابراهيم</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="address-card my-4">
+                                <div class="d-flex justify-content-between top-card">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="address" id="address-3">
+                                        <label class="form-check-label" for="address-3">
+                                            عنوان المنزل
+                                        </label>
+                                    </div>
+                                    <div class="add-btns">
+                                        <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
+                                        <a href="#"><span><i class="far fa-trash-can"></i></span></a>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>العنوان</td>
+                                            <td>السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>رقم الموبايل </td>
+                                            <td> 12345546464</td>
+                                        </tr>
+                                        <tr>
+                                            <td>اسم المستخدم</td>
+                                            <td>رحمه ابراهيم</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

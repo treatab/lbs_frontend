@@ -5,7 +5,7 @@
     <meta name="description" content="LBS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forget Password</title>
+    <title>Orders</title>
     <link rel="shortcut icon" href="assets/images/logo.svg">
     <!-- For English version -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
@@ -119,13 +119,13 @@
                         <div class="cart">
                             <a href="#"><i class="fas fa-cart-shopping"></i></a>
                         </div>
-                        <div class="before-login"> <!-- add class ="d-none" after login-->
+                        <div class="before-login d-none"> <!-- add class ="d-none" after login-->
                             <span class="icon me-1"><i class="far fa-user"></i></span>
                             <a href="login.html"><span>تسجيل الدخول</span></a>
                             <span>|</span>
                             <a href="register.html"><span>انشاء حساب</span></a>
                         </div>
-                        <div class="after-login d-none"> <!-- remove class ="d-none" after login-->
+                        <div class="after-login"> <!-- remove class ="d-none" after login-->
                             <div class="user-account">
                                 <div class="name">
                                     <span class="me-1"><img src="assets/images/user.png" alt="profile-image"></span>
@@ -276,21 +276,200 @@
         <div class="overlay"></div>
     </section>
     <div id="main-wrapper">
-        <div id="login">
+        <div id="order-bill" class="py-4">
             <div class="container">
-                <div id="login-card" class="my-4">
-                    <div class="logo text-center mb-3">
-                        <img src="assets/images/logo.svg" alt="logo image">
-                    </div>
-                    <div class="sign-form">
-                        <h5 class="fw-bold mb-3">نسيت كلمه المرور</h5>
-                        <form>
-                            <div class="form-input mb-3">
-                                <label class="form-label text-darkGray" for="phone-email">رقم الجوال / البريد الالكتروني</label>
-                                <input type="text" id="phone-email" class="form-control">
+                <div class="row">
+                    <div class="col-lg-8 mb-3 mb-lg-0">
+                        <div class="bill-card mb-3" data-aos="fade-up">
+                            <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                                <div class="date fw-bold">01/05/2023</div>
+                                <span class="text-primary fw-600">مكتمل</span>
                             </div>
-                            <a href="resetpassword.html" class="btn btn-primary w-100">استمرار</a>
-                        </form>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div>
+                                    <p class="text-dark fw-600 mb-2">
+                                        <span>اسم العميل : </span>
+                                        <span> رحمه ابراهيم</span>
+                                    </p>
+                                    <p class="text-dark fw-600 mb-2">
+                                        <span>العنوان : </span>
+                                        <span>حي الشيخ عبد العزيز</span>
+                                    </p>
+                                </div>        
+                                <div>
+                                    <p class="text-dark fw-600 mb-2">
+                                        <spa>صافي الطلب : </spa>
+                                        <spa>350.000 ر.س</spa>
+                                    </p>
+                                    <p class="text-dark fw-600 mb-2">
+                                        <span>طريقه الدفع : </span>
+                                        <span>أونلاين</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bill-card" data-aos="fade-up">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom" data-aos="fade-in">
+                                <h5 class="fw-bold mb-0">تفاصيل الطلب</h5>
+                                <div class="bill">
+                                    <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#orderReturnsModal" class="btn btn-primary px-4">إسترجاع الطلب</a>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <div class="item" data-aos="fade-up">
+                                    <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-between gap-2">
+                                                <div class="text-center text-sm-start">
+                                                    <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                    <div class="d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 text-darkGray mb-2">
+                                                        <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                    </div>
+                                                    <p class="text-primary mb-0">تاريخ التوصيل 05/01/2023</p>
+                                                </div>
+                                                <div class="text-center text-sm-end fw-600">
+                                                    <div class="price mb-sm-2">
+                                                        <span> 200 ر.س</span>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <span class="text-red me-3 discount">خصم 20%</span>
+                                                        <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" data-aos="fade-up">
+                                    <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-between gap-2">
+                                                <div class="text-center text-sm-start">
+                                                    <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                    <div class="d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 text-darkGray mb-2">
+                                                        <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                    </div>
+                                                    <p class="text-primary mb-0">تاريخ التوصيل 05/01/2023</p>
+                                                </div>
+                                                <div class="text-center text-sm-end fw-600">
+                                                    <div class="price mb-sm-2">
+                                                        <span> 200 ر.س</span>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <span class="text-red me-3 discount">خصم 20%</span>
+                                                        <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" data-aos="fade-up">
+                                    <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-between gap-2">
+                                                <div class="text-center text-sm-start">
+                                                    <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                    <div class="d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 text-darkGray mb-2">
+                                                        <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                    </div>
+                                                    <p class="text-primary mb-0">تاريخ التوصيل 05/01/2023</p>
+                                                </div>
+                                                <div class="text-center text-sm-end fw-600">
+                                                    <div class="price mb-sm-2">
+                                                        <span> 200 ر.س</span>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <span class="text-red me-3 discount">خصم 20%</span>
+                                                        <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="bill-card" data-aos="fade-in">
+                            <h5 class="fw-bold border-bottom pb-2 mb-2">الفاتورة</h5>
+                            <div class="d-flex flex-wrap justify-content-between mb-2">
+                                <span>اسم المتجر</span>
+                                <span>امازون</span>
+                            </div>
+                            <div class="mb-3">
+                                <p>عنوان المتجر</p>
+                                <div class="d-flex gap-2">
+                                    <div><img src="assets/images/store-img.png" alt="store image" class="img-fluid"></div>
+                                    <div><img src="assets/images/qr-code.png" alt="qr code" class="img-fluid"></div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>رقم الطلب</span>
+                                <span>515515131</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>رقم الضريبي</span>
+                                <span>2111151515555555999</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>عدد المنتجات</span>
+                                <span>4 منتجات</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>المجموع الفرعي</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>السعر قبل الخصم</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>نسبه الخصم</span>
+                                <span>20%</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>السعر بعد الخصم</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>القيمة المضافه</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span>التوصيل</span>
+                                <span>20 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3">
+                                <span class="fw-bold">المجموع الكلي</span>
+                                <span class="fw-bold">500 ر.س</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -206,15 +206,23 @@ $(function () {
   })
 
 
-  $(".rating").rating({
-    clearButton: '',
-    clearCaption: '',
-    'size': 'sm',
-    starCaptions: function (val) {
-        return '(' + val + ')';
-    }
-  }); 
+  if($(".rating").length != 0) {
+    $(".rating").rating({
+      clearButton: '',
+      clearCaption: '',
+      'size': 'sm',
+      starCaptions: function (val) {
+          return '(' + val + ')';
+      }
+    }); 
+  };
 
+/*   $('.select2').select2({
+      placeholder: $('.select2 option:first').attr('label'),
+      minimumResultsForSearch: Infinity,
+      width: '100%'
+  });
+ */
   /* Initialize animation on scroll */
   function initiateAnimation() {
     AOS.init({

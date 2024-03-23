@@ -26,28 +26,92 @@
         <div class="top-header">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-between top-content">
-                    <div class="d-flex align-items-center gap-3 address">
-                        <div class="d-flex align-items-center gap-3">
-                            <i class="fas fa-location-dot"></i>
-                            <p class="mb-0">
-                                <span class="text-darkGray">التوصيل الي <i class="fas fa-chevron-down ms-1"></i></span>
-                                <span class="d-block details">المنصورة , حي الجامعه</span>
-                            </p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="dropdown-list address">
+                            <div class="d-flex align-items-center gap-3 default-address">
+                                <i class="fas fa-location-dot"></i>
+                                <p class="mb-0">
+                                    <span class="text-darkGray">التوصيل الي <i class="fas fa-chevron-down ms-1"></i></span>
+                                    <span class="d-block details">المنصورة , حي الجامعه</span>
+                                </p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>السعودية , حي الشيخ عبد العزيز ,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>السعودية , حي الشيخ عبد العزيز ,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>السعودية , حي الشيخ عبد العزيز ,</span>
+                                    </li>
+                                </ul>
+                                <div class="text-center mb-3">
+                                    <a href="address-add.html" class="text-primary">إضافه عنوان</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="lang">
-                            <img src="assets/images/sa-logo.svg" alt="lang image">
-                            <span>AR</span>
+                            <div>
+                                <img src="assets/images/sa-logo.svg" alt="lang image">
+                                <span>عربى</span>
+                                <span class="icon"><i class="fas fa-chevron-down ms-1"></i></span>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <img src="assets/images/sa-logo.svg" alt="lang image">
+                                        <span>عربى</span>
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/en-logo.svg" alt="lang image">
+                                        <span>English</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="search">
                         <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." aria-label="text" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." id="main-search" aria-label="text" aria-describedby="addon-wrapping">
                             <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
                         </div>
                     </div>
                     <div class="top-options d-flex align-items-center gap-4">
                         <div class="notify">
                             <a href="#"><i class="far fa-bell"></i></a>
+                            <div class="dropdown">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="wishlist">
                             <a href="#"><i class="far fa-heart"></i></a>
@@ -55,21 +119,46 @@
                         <div class="cart">
                             <a href="#"><i class="fas fa-cart-shopping"></i></a>
                         </div>
-                        <div class="before-login">
+                        <div class="before-login"> <!-- add class ="d-none" after login-->
                             <span class="icon me-1"><i class="far fa-user"></i></span>
                             <a href="login.html"><span>تسجيل الدخول</span></a>
                             <span>|</span>
                             <a href="register.html"><span>انشاء حساب</span></a>
                         </div>
-                        <div class="after-login d-none">
+                        <div class="after-login d-none"> <!-- remove class ="d-none" after login-->
                             <div class="user-account">
-                                <span class="icon me-1"><i class="far fa-user"></i></span>
+                                <div class="name">
+                                    <span class="me-1"><img src="assets/images/user.png" alt="profile-image"></span>
+                                    <span class="user-name">اسم المستخدم</span>
+                                    <span class="close text-darkGray"><i class="fas fa-chevron-down"></i></span>
+                                    <span class="open text-darkGray"><i class="fas fa-chevron-up"></i></span>
+                                </div>
                                 <div class="dropdown">
                                     <ul class="list-unstyled">
-                                        <li><a href="#">الملف الشخصي</a></li>
-                                        <li><a href="#">العناوين</a></li>
-                                        <li><a href="#">الطلبات</a></li>
-                                        <li><a href="#">تسجيل الخروج</a></li>
+                                        <li>
+                                            <a href="profile.html">
+                                                <span class="icon"><i class="fas fa-user"></i></span>
+                                                <span>الملف الشخصي</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addresses.html">
+                                                <span class="icon"><i class="fas fa-location-dot"></i></span>
+                                                <span>العناوين</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="orders.html">
+                                                <span class="icon"><i class="fas fa-cube"></i></span>
+                                                <span>الطلبات</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon"><i class="fas fa-arrow-right-from-bracket"></i></span>
+                                                <span>تسجيل الخروج</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -89,7 +178,7 @@
                         </div>
                         <div id="main-menu">
                             <ul id="menu" class="d-block d-lg-flex list-unstyled mb-0 navbar">
-                                <li><a href="#" class="active"> <span>الرئيسية</span></a></li>
+                                <li><a href="index.html" class="active"> <span>الرئيسية</span></a></li>
                                 <li><a href="#" class="text-red"><span>أحدث العروض</span></a></li>
                                 <li><a href="#"><span>أحدث المنتجات</span></a></li>
                                 <li><a href="#"><span>التيشرتات</span></a></li>
@@ -140,7 +229,7 @@
             </div>
             <div class="search">
                 <div class="input-group flex-nowrap">
-                    <input type="text" class="form-control" placeholder="البحث باسم المنتجات . البراندات ..." aria-label="text" aria-describedby="addon-wrapping">
+                    <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." id="main-search-2" aria-label="text" aria-describedby="addon-wrapping">
                     <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
                 </div>
             </div>

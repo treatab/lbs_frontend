@@ -80,13 +80,41 @@
                     </div>
                     <div class="search">
                         <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." aria-label="text" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." id="main-search" aria-label="text" aria-describedby="addon-wrapping">
                             <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
                         </div>
                     </div>
                     <div class="top-options d-flex align-items-center gap-4">
                         <div class="notify">
                             <a href="#"><i class="far fa-bell"></i></a>
+                            <div class="dropdown">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="wishlist">
                             <a href="#"><i class="far fa-heart"></i></a>
@@ -102,7 +130,12 @@
                         </div>
                         <div class="after-login d-none"> <!-- remove class ="d-none" after login-->
                             <div class="user-account">
-                                <span class="user-icon me-1"><i class="far fa-user"></i></span>
+                                <div class="name">
+                                    <span class="me-1"><img src="assets/images/user.png" alt="profile-image"></span>
+                                    <span class="user-name">اسم المستخدم</span>
+                                    <span class="close text-darkGray"><i class="fas fa-chevron-down"></i></span>
+                                    <span class="open text-darkGray"><i class="fas fa-chevron-up"></i></span>
+                                </div>
                                 <div class="dropdown">
                                     <ul class="list-unstyled">
                                         <li>
@@ -148,7 +181,7 @@
                         </div>
                         <div id="main-menu">
                             <ul id="menu" class="d-block d-lg-flex list-unstyled mb-0 navbar">
-                                <li><a href="#" class="active"> <span>الرئيسية</span></a></li>
+                                <li><a href="index.html" class="active"> <span>الرئيسية</span></a></li>
                                 <li><a href="#" class="text-red"><span>أحدث العروض</span></a></li>
                                 <li><a href="#"><span>أحدث المنتجات</span></a></li>
                                 <li><a href="#"><span>التيشرتات</span></a></li>
@@ -199,7 +232,7 @@
             </div>
             <div class="search">
                 <div class="input-group flex-nowrap">
-                    <input type="text" class="form-control" placeholder="البحث باسم المنتجات . البراندات ..." aria-label="text" aria-describedby="addon-wrapping">
+                    <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." id="main-search-2" aria-label="text" aria-describedby="addon-wrapping">
                     <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
                 </div>
             </div>
