@@ -5,7 +5,7 @@
     <meta name="description" content="LBS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders</title>
+    <title>Order bill</title>
     <link rel="shortcut icon" href="assets/images/logo.svg">
     <!-- For English version -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
@@ -179,7 +182,7 @@
                         <div id="main-menu">
                             <ul id="menu" class="d-block d-lg-flex list-unstyled mb-0 navbar">
                                 <li><a href="index.html" class="active"> <span>الرئيسية</span></a></li>
-                                <li><a href="#" class="text-red"><span>أحدث العروض</span></a></li>
+                                <li><a href="offers.html" class="text-red"><span>أحدث العروض</span></a></li>
                                 <li><a href="#"><span>أحدث المنتجات</span></a></li>
                                 <li><a href="#"><span>التيشرتات</span></a></li>
                                 <li><a href="#"><span>البناطيل</span></a></li>
@@ -247,7 +250,7 @@
         <div id="main-menu">
             <ul class="list-unstyled mb-0">
                 <li><a href="#" class="active"> <span>الرئيسية</span></a></li>
-                <li><a href="#" class="text-red"><span>أحدث العروض</span></a></li>
+                <li><a href="offers.html" class="text-red"><span>أحدث العروض</span></a></li>
                 <li><a href="#"><span>أحدث المنتجات</span></a></li>
                 <li><a href="#"><span>التيشرتات</span></a></li>
                 <li><a href="#"><span>البناطيل</span></a></li>
@@ -341,7 +344,7 @@
                                                         <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
                                                     </div>
                                                     <div>
-                                                        <a href="#" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
+                                                        <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#orderEvaluationModal" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -373,7 +376,7 @@
                                                         <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
                                                     </div>
                                                     <div>
-                                                        <a href="#" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
+                                                        <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#orderEvaluationModal" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -405,7 +408,7 @@
                                                         <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
                                                     </div>
                                                     <div>
-                                                        <a href="#" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
+                                                        <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#orderEvaluationModal" class="btn btn-outline-dark btn-evaluation py-1 px-5">تقييم</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -548,12 +551,285 @@
             </div>
         </div>
     </footer>
+    <div class="modal main-modal orderEvaluationModal fade" id="orderEvaluationModal" aria-hidden="true"  tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header justify-content-center border-0 p-0">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-0 m-3">
+                    <form>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label text-darkGray" for="order_rate_txt">تقييم المنتج</label>
+                            <div class="rating-order clearfix mb-2">
+                                <input id="input-21" name="input-21"
+                                    class="rating rating-loading" value="0" data-min="0"
+                                    data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl">
+                                <!-- for arabic-ver dir="rtl" -->
+                            </div>
+                        </div>
+                        <div>
+                            <textarea name="order_rate_txt" id="order_rate_txt" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100">إرسال</button>
+                            </div>
+                            <div class="col-6">
+                                <button data-bs-dismiss="modal" aria-label="Close" class="btn btn-outline-dark w-100">إلغاء</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal main-modal orderReturnsModal fade" id="orderReturnsModal" aria-hidden="true"  tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header border-0 p-0">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div>
+                        <h5 class="fw-bold">استرجاع منتجات</h5>
+                        <p>برجاء اختر المنتج التي تريد استرجاعه من هذا الطلب</p>
+                    </div>
+                </div>
+                <div class="modal-body p-0 m-3">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-4 mb-3">
+                                <div class="order-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input item-check" type="checkbox" value="" id="itemCheck-1" checked>
+                                    </div>
+                                    <div class="d-flex gap-2 mb-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="pro-details">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="price d-flex flex-wrap justify-content-between gap-1">
+                                                <span class="text-darkGray text-decoration-line-through">500 ر.س</span>
+                                                <span class="text-primary">500 ر.س</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-controls">
+                                        <div class="mb-2">
+                                            <label class="form-label text-darkGray" for="itemQyt-1">الكمية</label>
+                                            <input type="text" id="itemQyt-1" class="form-control">
+                                        </div>
+                                        <div>
+                                            <label class="form-label text-darkGray" for="reason-1">سبب الاسترجاع</label>
+                                            <select class="form-select" id="reason-1">
+                                                <option selected>اختر</option>
+                                                <option value="1">غير صالح</option>
+                                                <option value="2">تالف</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="order-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input item-check" type="checkbox" value="" id="itemCheck-2" checked>
+                                    </div>
+                                    <div class="d-flex gap-2 mb-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="pro-details">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="price d-flex flex-wrap justify-content-between gap-1">
+                                                <span class="text-darkGray text-decoration-line-through">500 ر.س</span>
+                                                <span class="text-primary">500 ر.س</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-controls">
+                                        <div class="mb-2">
+                                            <label class="form-label text-darkGray" for="itemQyt-2">الكمية</label>
+                                            <input type="text" id="itemQyt-2" class="form-control">
+                                        </div>
+                                        <div>
+                                            <label class="form-label text-darkGray" for="reason-2">سبب الاسترجاع</label>
+                                            <select class="form-select" id="reason-2">
+                                                <option selected>اختر</option>
+                                                <option value="1">غير صالح</option>
+                                                <option value="2">تالف</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="order-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input item-check" type="checkbox" value="" id="itemCheck-3" checked>
+                                    </div>
+                                    <div class="d-flex gap-2 mb-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="pro-details">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="price d-flex flex-wrap justify-content-between gap-1">
+                                                <span class="text-darkGray text-decoration-line-through">500 ر.س</span>
+                                                <span class="text-primary">500 ر.س</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-controls">
+                                        <div class="mb-2">
+                                            <label class="form-label text-darkGray" for="itemQyt-3">الكمية</label>
+                                            <input type="text" id="itemQyt-3" class="form-control">
+                                        </div>
+                                        <div>
+                                            <label class="form-label text-darkGray" for="reason-3">سبب الاسترجاع</label>
+                                            <select class="form-select" id="reason-3">
+                                                <option selected>اختر</option>
+                                                <option value="1">غير صالح</option>
+                                                <option value="2">تالف</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="order-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input item-check" type="checkbox" value="" id="itemCheck-4">
+                                    </div>
+                                    <div class="d-flex gap-2 mb-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="pro-details">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="price d-flex flex-wrap justify-content-between gap-1">
+                                                <span class="text-darkGray text-decoration-line-through">500 ر.س</span>
+                                                <span class="text-primary">500 ر.س</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-controls d-none">
+                                        <div class="mb-2">
+                                            <label class="form-label text-darkGray" for="itemQyt-4">الكمية</label>
+                                            <input type="text" id="itemQyt-4" class="form-control">
+                                        </div>
+                                        <div>
+                                            <label class="form-label text-darkGray" for="reason-4">سبب الاسترجاع</label>
+                                            <select class="form-select" id="reason-4">
+                                                <option selected>اختر</option>
+                                                <option value="1">غير صالح</option>
+                                                <option value="2">تالف</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="order-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input item-check" type="checkbox" value="" id="itemCheck-5">
+                                    </div>
+                                    <div class="d-flex gap-2 mb-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="pro-details">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="price d-flex flex-wrap justify-content-between gap-1">
+                                                <span class="text-darkGray text-decoration-line-through">500 ر.س</span>
+                                                <span class="text-primary">500 ر.س</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-controls d-none">
+                                        <div class="mb-2">
+                                            <label class="form-label text-darkGray" for="itemQyt-5">الكمية</label>
+                                            <input type="text" id="itemQyt-5" class="form-control">
+                                        </div>
+                                        <div>
+                                            <label class="form-label text-darkGray" for="reason-5">سبب الاسترجاع</label>
+                                            <select class="form-select" id="reason-5">
+                                                <option selected>اختر</option>
+                                                <option value="1">غير صالح</option>
+                                                <option value="2">تالف</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="order-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input item-check" type="checkbox" value="" id="itemCheck-6">
+                                    </div>
+                                    <div class="d-flex gap-2 mb-2">
+                                        <div class="img">
+                                            <img src="assets/images/pro-img.png" alt="product image">
+                                        </div>
+                                        <div class="pro-details">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="price d-flex flex-wrap justify-content-between gap-1">
+                                                <span class="text-darkGray text-decoration-line-through">500 ر.س</span>
+                                                <span class="text-primary">500 ر.س</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-controls d-none">
+                                        <div class="mb-2">
+                                            <label class="form-label text-darkGray" for="itemQyt-6">الكمية</label>
+                                            <input type="text" id="itemQyt-6" class="form-control">
+                                        </div>
+                                        <div>
+                                            <label class="form-label text-darkGray" for="reason-6">سبب الاسترجاع</label>
+                                            <select class="form-select" id="reason-6">
+                                                <option selected>اختر</option>
+                                                <option value="1">غير صالح</option>
+                                                <option value="2">تالف</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <button class="btn btn-primary w-100">إرسال</button>
+                            </div>
+                            <div class="col-6">
+                                <button data-bs-dismiss="modal" aria-label="Close" class="btn btn-outline-dark w-100">إلغاء</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $('.order-item .item-check').change(function() {
+            if ($(this).is(':checked')) {
+                $(this).closest('.order-item').find('.item-controls').removeClass('d-none');
+            } else {
+                $(this).closest('.order-item').find('.item-controls').addClass('d-none');
+            }
+        });
+    </script>
 </body>
 </html>

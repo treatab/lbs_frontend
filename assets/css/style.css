@@ -616,6 +616,9 @@ a:hover {
   color: #43AA3A;
 }
 
+.form-check-input {
+  cursor: pointer;
+}
 .form-check-input:checked {
   border-color: #9F9F9F;
 }
@@ -626,6 +629,11 @@ a:hover {
 .form-check-input[type=radio]:checked {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2343AA3A'/%3e%3c/svg%3e");
   background-color: #fff;
+}
+.form-check-input[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%2343AA3A' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  border-color: #9F9F9F !important;
+  background-color: #fff !important;
 }
 
 .fw-300 {
@@ -695,35 +703,41 @@ input:focus-visible {
   border-radius: 10px;
 }
 
-#most-requested .pro-card .pro-body .rating-container .rating-stars {
+.modal .modal-dialog .modal-content .rating-container .rating-stars, #offers #filter .rating-container .rating-stars, #most-requested .pro-card .pro-body .rating-container .rating-stars {
   outline: none;
   border: none;
 }
-#most-requested .pro-card .pro-body .rating-container .filled-stars {
+.modal .modal-dialog .modal-content .rating-container .filled-stars, #offers #filter .rating-container .filled-stars, #most-requested .pro-card .pro-body .rating-container .filled-stars {
   left: auto;
   right: 0;
   transform: unset;
 }
-#most-requested .pro-card .pro-body input,
+.modal .modal-dialog .modal-content .rating-input, #offers #filter .rating-input, #most-requested .pro-card .pro-body .rating-input,
+.modal .modal-dialog .modal-content .clear-rating,
+#offers #filter .clear-rating,
 #most-requested .pro-card .pro-body .clear-rating,
+.modal .modal-dialog .modal-content .caption,
+#offers #filter .caption,
 #most-requested .pro-card .pro-body .caption {
   display: none;
 }
-#most-requested .pro-card .pro-body .rating-sm {
+.modal .modal-dialog .modal-content .rating-sm, #offers #filter .rating-sm, #most-requested .pro-card .pro-body .rating-sm {
   font-size: 16px;
 }
-#most-requested .pro-card .pro-body .rating-md {
+.modal .modal-dialog .modal-content .rating-md, #offers #filter .rating-md, #most-requested .pro-card .pro-body .rating-md {
   font-size: 24px;
 }
-#most-requested .pro-card .pro-body .empty-stars i,
-#most-requested .pro-card .pro-body .filled-stars i {
+.modal .modal-dialog .modal-content .empty-stars, #offers #filter .empty-stars, #most-requested .pro-card .pro-body .empty-stars {
+  color: #9F9F9F;
+}
+.modal .modal-dialog .modal-content .filled-stars i, #offers #filter .filled-stars i, #most-requested .pro-card .pro-body .filled-stars i {
   color: #ffc107;
 }
-#most-requested .pro-card .pro-body .filled-stars {
+.modal .modal-dialog .modal-content .filled-stars, #offers #filter .filled-stars, #most-requested .pro-card .pro-body .filled-stars {
   -webkit-text-stroke: unset;
   text-shadow: unset;
 }
-#most-requested .pro-card .pro-body .caption-secondary {
+.modal .modal-dialog .modal-content .caption-secondary, #offers #filter .caption-secondary, #most-requested .pro-card .pro-body .caption-secondary {
   background-color: transparent;
   color: #ffc107;
 }
@@ -1601,7 +1615,7 @@ footer #copyright .social li a:hover {
   color: #fff;
 }
 
-#mapModal .input-search {
+.mapModal .input-search {
   width: calc(100% - 20px);
   position: absolute;
   top: 10px;
@@ -1612,19 +1626,19 @@ footer #copyright .social li a:hover {
   border-radius: 10px;
   z-index: 1;
 }
-#mapModal .input-search .icon {
+.mapModal .input-search .icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #9F9F9F;
 }
-#mapModal .input-search input {
+.mapModal .input-search input {
   width: 100%;
   font-size: 14px;
   padding-inline-start: 20px;
   border: 0;
 }
-#mapModal #map {
+.mapModal #map {
   height: 500px;
   border-radius: 10px;
 }
@@ -1846,6 +1860,157 @@ footer #copyright .social li a:hover {
   }
 }
 
+.orderReturnsModal .order-item {
+  position: relative;
+  padding: 10px;
+  font-weight: 600;
+  background: #F9F9F9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.orderReturnsModal .order-item .form-check {
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+.orderReturnsModal .order-item .img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+@media (max-width: 1199.98px) {
+  .orderReturnsModal .order-item .img img {
+    width: 60px;
+    height: 60px;
+  }
+}
+.orderReturnsModal .order-item .form-label {
+  font-size: 14px;
+}
+.orderReturnsModal .order-item .form-control {
+  padding: 0.3rem 0.5rem;
+}
+.orderReturnsModal .order-item .pro-details .pro-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+#offers #filter-btn {
+  background-color: #f9f9f9;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin-inline-start: auto;
+}
+#offers #filter {
+  padding: 15px;
+  font-weight: 600;
+  background: #F9F9F9;
+  border-radius: 10px;
+}
+@media (max-width: 991.98px) {
+  #offers #filter {
+    position: fixed;
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(100%);
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.1019607843);
+  }
+}
+#offers #filter .accordion-item {
+  background: transparent;
+  margin-bottom: 10px;
+}
+#offers #filter .accordion-item .accordion-button {
+  padding: 5px 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  border: 0 !important;
+  background: transparent;
+}
+#offers #filter .accordion-item .accordion-button:not(.collapsed) {
+  color: #000;
+  background: transparent;
+  box-shadow: unset;
+}
+#offers #filter .accordion-item .accordion-button:not(.collapsed):after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+#offers #filter .accordion-item .accordion-button::after {
+  width: 1rem;
+  height: 1rem;
+  background-size: 1rem;
+  margin: 0;
+}
+#offers #filter .accordion-item .accordion-button:focus {
+  box-shadow: unset;
+}
+#offers #filter .accordion-item .accordion-body {
+  padding: 5px 0;
+}
+#offers #filter .accordion-item .accordion-body .form-check {
+  margin-bottom: 8px;
+}
+#offers #filter .accordion-item .accordion-body .form-check .form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 2px;
+}
+#offers #filter .accordion-item .accordion-body label {
+  color: #9F9F9F;
+}
+#offers #filter .rating-md {
+  font-size: 14px;
+}
+#offers #products-list .pro-card {
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.1019607843);
+}
+#offers #products-list .pro-card .discount {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 9px;
+  font-size: 12px;
+  z-index: 2;
+  color: #fff;
+  background: rgba(215, 29, 29, 0.7490196078);
+  border-radius: 14px;
+}
+#offers #products-list .pro-card .img img {
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 575.98px) {
+  #offers #products-list .pro-card .img img {
+    aspect-ratio: unset;
+  }
+}
+#offers #products-list .pro-card .pro-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .modal .modal-dialog .modal-content {
   padding: 15px;
   border-radius: 24px;
@@ -1867,6 +2032,9 @@ footer #copyright .social li a:hover {
 }
 .modal .modal-dialog .modal-content .close .icon i {
   color: #43AA3A;
+}
+.modal .modal-dialog .modal-content .rating-md {
+  font-size: 20px;
 }
 
 .rtl .owl-carousel .owl-nav button i {
@@ -1911,4 +2079,8 @@ footer #copyright .social li a:hover {
 .rtl #login-card .form-input .icon {
   right: auto;
   left: 15px;
+}
+.rtl .orderReturnsModal .order-item .form-check {
+  left: auto;
+  right: 8px;
 }/*# sourceMappingURL=style.css.map */

@@ -209,6 +209,7 @@ a {
 }
 
 .form-check-input{
+    cursor: pointer;
     &:checked {
         border-color: map_get($theme-colors, darkGray);
     }
@@ -217,7 +218,14 @@ a {
         height: 1.25em;
         &:checked {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2343AA3A'/%3e%3c/svg%3e");
-            background-color: #fff;
+            background-color: map_get($theme-colors, white);
+        }
+    }
+    &[type=checkbox]{
+        &:checked {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%2343AA3A' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+            border-color: map_get($theme-colors, darkGray) !important;
+            background-color: map_get($theme-colors, white) !important;
         }
     }
 }
@@ -312,8 +320,7 @@ input{
             transform: unset;
         }
     }
-
-    input,
+    .rating-input,
     .clear-rating,
     .caption {
         display: none;
@@ -327,7 +334,9 @@ input{
         font-size: 24px;
     }
 
-    .empty-stars,
+    .empty-stars{
+        color: map_get($theme-colors, darkGray);
+    }
     .filled-stars {
         i {
             color: #ffc107;
@@ -1199,7 +1208,7 @@ footer{
     }
 }
 
-#mapModal{
+.mapModal{
     .input-search {
         width: calc(100% - 20px);
         position: absolute;
@@ -1425,6 +1434,153 @@ footer{
         }
     }
 }
+.orderReturnsModal{
+ .order-item{
+    position: relative;
+    padding: 10px;
+    font-weight: 600;
+    background: map_get($theme-colors, lightgray);
+    border-radius: 10px;
+    overflow: hidden;
+    .form-check {
+        position: absolute;
+        top: 0;
+        left: 8px;
+    }
+    .img{
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            @media (max-width: 1199.98px) {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    .form-label{
+        font-size: 14px;
+    }
+    .form-control{
+        padding: .3rem 0.5rem;
+    }
+    .pro-details{
+        .pro-name{
+            @include overflowTextVertical(2);
+        }
+    }
+ }   
+}
+
+#offers{
+    #filter-btn {
+        background-color: #f9f9f9;
+        width: fit-content;
+        padding: 10px 30px;
+        border-radius: 10px;
+        margin-inline-start: auto;
+    }
+    #filter{
+        padding: 15px;
+        font-weight: 600;
+        background: map_get($theme-colors, lightgray);
+        border-radius: 10px;
+        @media (max-width: 991.98px) {
+            position: fixed;
+            width: 100%;
+            height: 350px;
+            overflow: auto;
+            bottom: 0;
+            left: 0;
+            z-index: 1030;
+            transition: all .5s ease-in-out;
+            transform: translateY(100%);
+            box-shadow: 0px 4px 9px 0px #0000001A;
+        }
+        .accordion-item {
+            background: transparent;
+            margin-bottom: 10px;
+            .accordion-button {
+                padding: 5px 0;
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                border: 0 !important;
+                background: transparent;
+                &:not(.collapsed) {
+                    color: #000;
+                    background: transparent;
+                    box-shadow: unset;
+                    &:after{
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+                }
+                &::after {
+                    width: 1rem;
+                    height: 1rem;
+                    background-size: 1rem;
+                    margin: 0;
+                }
+                &:focus{
+                    box-shadow: unset;
+                }
+            }
+            .accordion-body {
+                padding: 5px 0;
+                .form-check{
+                    margin-bottom: 8px;
+                    .form-check-input {
+                        width: 1.25em;
+                        height: 1.25em;
+                        margin-top: 2px;
+                    }
+                }
+                label{
+                    color: map_get($theme-colors, darkGray);
+                }
+            }
+        }
+        @extend %rating;
+        .rating-md {
+            font-size: 14px;
+        }        
+    }
+    #products-list{
+        .pro-card{
+            position: relative;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 4px 9px 0px #0000001A;
+            .discount {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                padding: 3px 9px;
+                font-size: 12px;
+                z-index: 2;
+                color: #fff;
+                background: #D71D1DBF;
+                border-radius: 14px;
+            }
+            .img {
+                img {
+                    width: 100%;
+                    max-height: 200px;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    @media (max-width: 575.98px) {
+                        aspect-ratio: unset;
+                    }
+                }
+            }
+            .pro-name{
+                @include overflowTextVertical(1);
+            }
+        }
+    }
+}
 
 .modal{
     .modal-dialog{
@@ -1449,9 +1605,15 @@ footer{
                     }
                 }
             }
+            @extend %rating;
+            .rating-md{
+                font-size: 20px;
+            }
         }
     }
 }
+
+
 
 .rtl {
     .owl-carousel{
@@ -1526,6 +1688,14 @@ footer{
             .icon {
                 right: auto;
                 left: 15px;
+            }
+        }
+    }
+    .orderReturnsModal{
+        .order-item{
+            .form-check {
+                left: auto;
+                right: 8px;
             }
         }
     }
