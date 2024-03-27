@@ -203,7 +203,7 @@ $(function () {
         $('#login .sign-form .send-again').removeClass('d-none');
       }
     }, 1000);
-  })
+  });
 
 
   if($(".rating").length != 0) {
@@ -216,6 +216,24 @@ $(function () {
       }
     }); 
   };
+
+  $('#offers #filter-btn').click(function(){
+    $('#offers #filter').toggleClass('open');
+  });
+
+  // cart number
+  $('.quantity .qtyplus').click(  function (e) {
+    let $input = $(this).prev('input.qty');
+    let val = parseInt($input.val());
+    $input.val(val + 1).change();
+  });
+
+  $('.quantity .qtyminus').click(function (e) {
+      let $input = $(this).next('input.qty');
+      var val = parseInt($input.val());
+      if (val > 1) 
+          $input.val(val - 1).change();
+  });
 
 /*   $('.select2').select2({
       placeholder: $('.select2 option:first').attr('label'),

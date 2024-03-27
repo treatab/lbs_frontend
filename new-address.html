@@ -117,7 +117,7 @@
                             <a href="#"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="cart">
-                            <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                            <a href="cart.html"><i class="fas fa-cart-shopping"></i></a>
                         </div>
                         <div class="before-login d-none"> <!-- add class ="d-none" after login-->
                             <span class="icon me-1"><i class="far fa-user"></i></span>
@@ -223,7 +223,7 @@
                         <a href="#"><i class="far fa-heart"></i></a>
                     </div>
                     <div class="cart">
-                        <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                        <a href="cart.html"><i class="fas fa-cart-shopping"></i></a>
                     </div>
                 </div>
             </div>
@@ -278,10 +278,22 @@
     <div id="main-wrapper">
         <div id="addresses" class="py-4">
             <div class="container">
-                <div id="list" data-aos="fade-in">
+                <div class="card" data-aos="fade-in">
                     <h5 class="fw-bold mb-4">إضافه عنوان جديد</h5>
                     <form id="new-address">
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-input mb-3">
+                                    <label class="form-label text-darkGray" for="user-name">اسم العميل باللغه الانجليزيه</label>
+                                    <input type="text" id="user-name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-input mb-3">
+                                    <label class="form-label text-darkGray" for="phone">رقم الجوال</label>
+                                    <input type="text" id="phone" class="form-control">
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label text-darkGray" for="country">اسم الدولة</label>
@@ -317,14 +329,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="phone">رقم الجوال</label>
-                                    <input type="text" id="phone" class="form-control">
+                                    <label class="form-label text-darkGray" for="block-name">اسم الحي</label>
+                                    <input type="text" id="block-name" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="user-name">اسم العميل باللغه الانجليزيه</label>
-                                    <input type="text" id="user-name" class="form-control">
+                                    <label class="form-label text-darkGray" for="street-name">اسم الشارع</label>
+                                    <input type="text" id="street-name" class="form-control">
                                 </div>
                                 <div>
                                     <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#mapModal" class="d-block text-center bg-darkGray w-100 p-2 mb-3 rounded-3 btn-map">تحديد العنوان من علي الخريطه</a>
