@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="LBS">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="shortcut icon" href="assets/images/logo.svg">
+    <!-- For English version -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
+    <!-- For Arabic version -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" />
+  
+</head>
+<body class="rtl"> <!-- En version remove class="rtl" -->
+    <section id="header" class="d-none d-lg-block">
+        <div class="top-header">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-between top-content">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="dropdown-list address">
+                            <div class="d-flex align-items-center gap-3 default-address">
+                                <i class="fas fa-location-dot"></i>
+                                <p class="mb-0">
+                                    <span class="text-darkGray">التوصيل الي <i class="fas fa-chevron-down ms-1"></i></span>
+                                    <span class="d-block details">المنصورة , حي الجامعه</span>
+                                </p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>السعودية , حي الشيخ عبد العزيز ,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>السعودية , حي الشيخ عبد العزيز ,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>السعودية , حي الشيخ عبد العزيز ,</span>
+                                    </li>
+                                </ul>
+                                <div class="text-center mb-3">
+                                    <a href="address-add.html" class="text-primary">إضافه عنوان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lang">
+                            <div>
+                                <img src="assets/images/sa-logo.svg" alt="lang image">
+                                <span>عربى</span>
+                                <span class="icon"><i class="fas fa-chevron-down ms-1"></i></span>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <img src="assets/images/sa-logo.svg" alt="lang image">
+                                        <span>عربى</span>
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/en-logo.svg" alt="lang image">
+                                        <span>English</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." id="main-search" aria-label="text" aria-describedby="addon-wrapping">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
+                        </div>
+                    </div>
+                    <div class="top-options d-flex align-items-center gap-4">
+                        <div class="notify">
+                            <a href="#"><i class="far fa-bell"></i></a>
+                            <div class="dropdown">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="far fa-bell"></i></span>
+                                            <span>جاري تجهيز طلبك</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wishlist">
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="cart">
+                            <a href="cart.html"><i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="before-login d-none"> <!-- add class ="d-none" after login-->
+                            <span class="icon me-1"><i class="far fa-user"></i></span>
+                            <a href="login.html"><span>تسجيل الدخول</span></a>
+                            <span>|</span>
+                            <a href="register.html"><span>انشاء حساب</span></a>
+                        </div>
+                        <div class="after-login"> <!-- remove class ="d-none" after login-->
+                            <div class="user-account">
+                                <div class="name">
+                                    <span class="me-1"><img src="assets/images/user.png" alt="profile-image"></span>
+                                    <span class="user-name">اسم المستخدم</span>
+                                    <span class="close text-darkGray"><i class="fas fa-chevron-down"></i></span>
+                                    <span class="open text-darkGray"><i class="fas fa-chevron-up"></i></span>
+                                </div>
+                                <div class="dropdown">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="profile.html">
+                                                <span class="icon"><i class="fas fa-user"></i></span>
+                                                <span>الملف الشخصي</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addresses.html">
+                                                <span class="icon"><i class="fas fa-location-dot"></i></span>
+                                                <span>العناوين</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="orders.html">
+                                                <span class="icon"><i class="fas fa-cube"></i></span>
+                                                <span>الطلبات</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon"><i class="fas fa-arrow-right-from-bracket"></i></span>
+                                                <span>تسجيل الخروج</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-5">
+                        <div class="navbar-logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo.svg" class="logo" alt="Logo" loading="lazy">
+                            </a>
+                        </div>
+                        <div id="main-menu">
+                            <ul id="menu" class="d-block d-lg-flex list-unstyled mb-0 navbar">
+                                <li><a href="index.html" class="active"> <span>الرئيسية</span></a></li>
+                                <li><a href="offers.html" class="text-red"><span>أحدث العروض</span></a></li>
+                                <li><a href="#"><span>أحدث المنتجات</span></a></li>
+                                <li><a href="#"><span>التيشرتات</span></a></li>
+                                <li><a href="#"><span>البناطيل</span></a></li>
+                                <li><a href="#"><span>بلوزات</span></a></li>
+                                <li><a href="#"><span>شربات</span></a></li>
+                                <li><a href="#"><span>التيشرتات</span></a></li>
+                                <li><a href="#"><span>البناطيل</span></a></li>
+                                <li><a href="#"><span>بلوزات</span></a></li>
+                                <li><a href="#"><span>شربات</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mobile-header" class="d-lg-none">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between top-content">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="toggle-menu menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.svg" class="logo" alt="Logo" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="top-options d-flex align-items-center gap-3">
+                    <div class="lang">
+                        <img src="assets/images/sa-logo.svg" alt="lang image">
+                        <span>AR</span>
+                    </div>
+                    <div class="notify">
+                        <a href="#"><i class="far fa-bell"></i></a>
+                    </div>
+                    <div class="wishlist">
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="cart">
+                        <a href="cart.html"><i class="fas fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control border-0" placeholder="البحث باسم المنتجات . البراندات ..." id="main-search-2" aria-label="text" aria-describedby="addon-wrapping">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="address">
+            <div class="container">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fas fa-location-dot"></i>
+                    <p class="mb-0">
+                        <span class="d-block details">المنصورة , حي الجامعه</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="main-menu">
+            <ul class="list-unstyled mb-0">
+                <li><a href="#" class="active"> <span>الرئيسية</span></a></li>
+                <li><a href="offers.html" class="text-red"><span>أحدث العروض</span></a></li>
+                <li><a href="#"><span>أحدث المنتجات</span></a></li>
+                <li><a href="#"><span>التيشرتات</span></a></li>
+                <li><a href="#"><span>البناطيل</span></a></li>
+                <li><a href="#"><span>بلوزات</span></a></li>
+                <li><a href="#"><span>شربات</span></a></li>
+                <li><a href="#"><span>التيشرتات</span></a></li>
+                <li><a href="#"><span>البناطيل</span></a></li>
+                <li><a href="#"><span>بلوزات</span></a></li>
+                <li><a href="#"><span>شربات</span></a></li>
+            </ul>
+            <div class="before-login">
+                <ul class="list-unstyled mb-0">
+                    <li><a href="login.html"><span>تسجيل الدخول</span></a></li>
+                    <li><a href="register.html"><span>انشاء حساب</span></a></li>
+                </ul>
+            </div>
+            <div class="after-login d-none">
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#">الملف الشخصي</a></li>
+                    <li><a href="#">العناوين</a></li>
+                    <li><a href="#">الطلبات</a></li>
+                    <li><a href="#">تسجيل الخروج</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <div id="main-wrapper">
+        <div id="product-details" class="py-4">
+            <div class="container">
+                <div id="product-main-details" class="mb-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="product-slider" class="mb-4 mb-lg-0" data-aos="fade-in">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="slider slider-nav">
+                                            <div>
+                                                <a href="assets/images/pro-img.png" class="border">
+                                                    <img src="assets/images/pro-img.png" alt="product image">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/images/pro-img.png" class="border">
+                                                    <img src="assets/images/pro-img.png" alt="product image">
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/images/pro-img.png" class="border">
+                                                    <img src="assets/images/pro-img.png" alt="product image">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9">
+                                            <div class="slider slider-single">
+                                                <div>
+                                                    <a href="assets/images/pro-img.png" data-fancybox="gallery">
+                                                        <img src="assets/images/pro-img.png" alt="product image">
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="assets/images/pro-img.png" data-fancybox="gallery">
+                                                        <img src="assets/images/pro-img.png" alt="product image">
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="assets/images/pro-img.png" data-fancybox="gallery">
+                                                        <img src="assets/images/pro-img.png" alt="product image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product-info h-100">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                    <h5 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h5>
+                                    <div class="discount"> <span>خصم 20 %</span> </div>
+                                </div>
+                                <p class="text-darkGray fw-600 mb-2">الماركه : سيمبول</p>
+                                <div class="rating-pro clearfix mb-2">
+                                    <input id="input-1" name="input-1"
+                                        class="rating rating-loading" value="5" data-min="0"
+                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                    <!-- for arabic-ver dir="rtl" -->
+                                </div>
+                                <p class="text-darkGray fw-600 mb-2">القسم الرئيسي/القسم الفرعي/القسم الداخلي</p>
+                                <p class="fw-600 mb-2">
+                                    <span>سعر المنتج قبل الخصم : </span>
+                                    <span>200 ر.س</span>
+                                </p>
+                                <p class="fw-600 mb-2">
+                                    <span>سعر المنتج بعد الخصم : </span>
+                                    <span>200 ر.س</span>
+                                </p>
+                                <div>
+                                    <h5 class="fw-600 mb-2">المقاسات</h5>
+                                    <ul class="d-flex flex-wrap gap-3 mb-3 list-unstyled sizes">
+                                        <li class="selected">لارج</li>
+                                        <li>متوسط</li>
+                                        <li>صغير</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
+                                    <div>
+                                        <h5 class="fw-600 mb-2">الألوان</h5>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li>
+                                                <input type="radio" name="color" id="color_1" value="1" hidden="">
+                                                <label for="color_1"><span style="background: #202B3D;"></span></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="color" id="color_2" value="2" hidden="">
+                                                <label for="color_2"><span style="background: #43AA3A;"></span></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="color" id="color_3" value="3" hidden="">
+                                                <label for="color_3"><span style="background: #5992A4;"></span></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="color" id="color_4" value="4" hidden="">
+                                                <label for="color_4"><span style="background: #EFA0A0;"></span></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="quantity">
+                                            <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                            <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                            <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                        </div>
+                                        <div>
+                                            <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews mb-4">
+                    <h5 class="text-primary border-bottom py-2 mb-2 heading-title">
+                        <span>التقييمات</span>
+                    </h5>
+                    <div class="review-card mb-3">
+                        <div class="d-flex gap-3">
+                            <div class="img">
+                                <img src="assets/images/user.png" alt="user image">
+                            </div>
+                            <div class="review-body">
+                                <div>
+                                    <span class="fw-600 me-3">اسم المستخدم</span>
+                                    <span class="date text-dark">01/05/2021</span>
+                                </div>
+                                <div class="rating-pro clearfix mb-2">
+                                    <input id="input-21" name="input-21"
+                                        class="rating rating-loading" value="5" data-min="0"
+                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                    <!-- for arabic-ver dir="rtl" -->
+                                </div>
+                                <p class="fw-600">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card mb-3">
+                        <div class="d-flex gap-3">
+                            <div class="img">
+                                <img src="assets/images/user.png" alt="user image">
+                            </div>
+                            <div class="review-body">
+                                <div>
+                                    <span class="fw-600 me-3">اسم المستخدم</span>
+                                    <span class="date text-dark">01/05/2021</span>
+                                </div>
+                                <div class="rating-pro clearfix mb-2">
+                                    <input id="input-22" name="input-22"
+                                        class="rating rating-loading" value="5" data-min="0"
+                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                    <!-- for arabic-ver dir="rtl" -->
+                                </div>
+                                <p class="fw-600">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-products mb-4">
+                    <h5 class="fw-bold mb-3">منتجات مشابهه</h5>
+                    <div id="products-list">
+                        <div class="owl-carousel related-products-carousel">
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item h-100">
+                                <div class="pro-card h-100 my-2 mx-1">
+                                    <div class="discount">
+                                        <span>خصم 20 %</span>
+                                    </div>
+                                    <div class="img">
+                                        <a href="product-details.html">
+                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="pro-details mt-2">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <p class="mb-2">نوع البراند</p>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                            <p class="mb-0">350.00 ج.م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="var-offers">
+                    <div class="container">
+                        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1"> <!-- row-cols-4 (4) number of card -->
+                            <div class="col mb-3 mb-lg-0">
+                                <div class="offer-card four-offers h-100">
+                                    <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                                    <div class="d-flex flex-wrap justify-content-center offers-list">
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mb-3 mb-lg-0">
+                                <div class="offer-card two-offers h-100">
+                                    <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                                    <div class="d-flex flex-wrap justify-content-center offers-list">
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mb-3 mb-lg-0">
+                                <div class="offer-card one-offers h-100">
+                                    <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                                    <div class="d-flex flex-wrap justify-content-center offers-list">
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mb-3 mb-lg-0">
+                                <div class="offer-card four-offers h-100">
+                                    <h5 class="title fw-bold mb-3">عنوان قابل للتغير</h5>
+                                    <div class="d-flex flex-wrap justify-content-center offers-list">
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                        <div class="offer mb-2">
+                                            <div class="img mb-1">
+                                                <img src="assets/images/offer-img.png" alt="offer image" class="img-fluid">
+                                            </div>
+                                            <p class="mb-0"> عنوان العرض</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 mb-3 mb-lg-0">
+                        <div class="footer-logo text-center mb-3 text-lg-start">
+                            <img src="assets/images/logo-white.svg" alt="logo image">
+                        </div>
+                        <div class="contact-us d-lg-block d-flex align-items-center justify-content-between justify-content-sm-center gap-3">
+                            <div class="d-flex align-items-center gap-2 mb-lg-2">
+                                <span>01012345600</span>
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span>01012345600</span>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>اعرف المزيد هنا</span></h5 class="text-primary fw-bold title">
+                                <ul>
+                                    <li> <a href="#">معلومات عن الموقع</a> </li>
+                                    <li> <a href="#">الوظائف</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>تسوق معنا</span></h5 class="text-primary fw-bold title">
+                                <ul>
+                                    <li><a href="#">حسابك</a></li>
+                                    <li><a href="#">مشترياتك</a></li>
+                                    <li><a href="#">المفضلة</a></li>
+                                    <li><a href="#">العناوين</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>دعنا نساعدك</span></h5 class="text-primary fw-bold title">
+                                <ul>
+                                    <li><a href="#">الشروط والأحكام</a></li>
+                                    <li><a href="#">سياسة الخصوصية</a></li>
+                                    <li><a href="#">الاستفسارات والتواصل</a></li>
+                                    <li><a href="#">سياسة الاسترجاع</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3 mb-lg-0">
+                                <h5 class="text-primary fw-bold title"><span>كن شريكا معنا</span></h5 class="text-primary fw-bold title">
+                                <ul>
+                                    <li><a href="#">افكارك</a></li>
+                                    <li><a href="#">المدونة</a></li>
+                                    <li><a href="#">تواصل معنا</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-center justify-content-sm-between align-items-center">
+                    <ul class="social list-unstyled d-flex align-items-center gap-3 mb-0">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    </ul>
+                    <p class="mb-0">حقوق الطبع والنشر © -2024 محفوظة </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.js"></script>
+    <!--Slick Silder-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        var rtlVal = $('html').attr('dir') == 'rtl' ? true : false;
+        $('.slider-single').slick({
+            rtl: rtlVal,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: false,
+            adaptiveHeight: true,
+            infinite: false,
+            useTransform: true,
+            speed: 400,
+            cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        });
+
+        $('.slider-nav')
+            .on('init', function (event, slick) {
+                $('.slider-nav .slick-slide.slick-current').addClass('is-active');
+            })
+            .slick({
+                slidesToShow: 3.5,
+                slidesToScroll: 3.5,
+                dots: false,
+                vertical: true,
+                verticalSwiping: true,
+                focusOnSelect: true,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            vertical: false,
+                            verticalSwiping: false,
+                        }
+                    }
+                ]
+            });
+
+        $('.slider-single').on('afterChange', function (event, slick, currentSlide) {
+            $('.slider-nav').slick('slickGoTo', currentSlide);
+            var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+            $('.slider-nav .slick-slide.is-active').removeClass('is-active');
+            $(currrentNavSlideElem).addClass('is-active');
+        });
+
+        $('.slider-nav').on('click', '.slick-slide', function (event) {
+            event.preventDefault();
+            var goToSingleSlide = $(this).data('slick-index');
+
+            $('.slider-single').slick('slickGoTo', goToSingleSlide);
+        });
+    </script>
+</body>
+</html>

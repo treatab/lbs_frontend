@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="LBS">
@@ -279,7 +279,309 @@
         <div id="checkout" class="py-4">
             <div class="container">
                 <div class="row">
-                    
+                    <div class="col-lg-7 mb-3 mb-lg-0">
+                        <div class="card">
+                            <h6 class="fw-bold border-bottom pb-2 mb-2 cart-title">
+                                <a href="cart.html">
+                                    <i class="fas fa-arrow-left"></i>
+                                    <span>السلة</span>
+                                </a>
+                            </h6>
+                            <div class="addresses">
+                                <div class="text-end" data-aos="fade-in">
+                                    <a href="new-address.html" class="text-primary">إضافه عنوان جديد</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="address-card my-4" data-aos="fade-in">
+                                            <div class="d-flex justify-content-between top-card border-bottom pb-2 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="address" id="address-1" checked>
+                                                    <label class="form-check-label" for="address-1">
+                                                        عنوان المنزل
+                                                    </label>
+                                                </div>
+                                                <div class="add-btns">
+                                                    <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
+                                                    <a href="#"><span><i class="far fa-trash-can"></i></span></a>
+                                                </div>
+                                            </div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>العنوان</td>
+                                                        <td class="add-name">السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>رقم الموبايل </td>
+                                                        <td> 12345546464</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="address-card my-4" data-aos="fade-in">
+                                            <div class="d-flex justify-content-between top-card border-bottom pb-2 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="address" id="address-2">
+                                                    <label class="form-check-label" for="address-2">
+                                                        عنوان المنزل
+                                                    </label>
+                                                </div>
+                                                <div class="add-btns">
+                                                    <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
+                                                    <a href="#"><span><i class="far fa-trash-can"></i></span></a>
+                                                </div>
+                                            </div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>العنوان</td>
+                                                        <td class="add-name">السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>رقم الموبايل </td>
+                                                        <td> 12345546464</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders">
+                                <div class="d-flex justify-content-between border-bottom pb-2 mb-2" data-aos="fade-in">
+                                    <p class="fw-bold mb-0">طلبك</ح>
+                                    <p class="fw-bold mb-0">5 منتجات</p>
+                                </div>
+                                <div id="products-list">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                                            <div class="pro-card">
+                                                <div class="discount">
+                                                    <span>خصم 20 %</span>
+                                                </div>
+                                                <div class="img">
+                                                    <a href="product-details.html">
+                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="pro-details mt-2">
+                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                                    <div class="d-flex flex-wrap justify-content-between specific">
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                    </div>
+                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                                            <div class="pro-card">
+                                                <div class="discount">
+                                                    <span>خصم 20 %</span>
+                                                </div>
+                                                <div class="img">
+                                                    <a href="product-details.html">
+                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="pro-details mt-2">
+                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                                    <div class="d-flex flex-wrap justify-content-between specific">
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                    </div>
+                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                                            <div class="pro-card">
+                                                <div class="discount">
+                                                    <span>خصم 20 %</span>
+                                                </div>
+                                                <div class="img">
+                                                    <a href="product-details.html">
+                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="pro-details mt-2">
+                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                                    <div class="d-flex flex-wrap justify-content-between specific">
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                    </div>
+                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                                            <div class="pro-card">
+                                                <div class="discount">
+                                                    <span>خصم 20 %</span>
+                                                </div>
+                                                <div class="img">
+                                                    <a href="product-details.html">
+                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="pro-details mt-2">
+                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                                    <div class="d-flex flex-wrap justify-content-between specific">
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                    </div>
+                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                                            <div class="pro-card">
+                                                <div class="discount">
+                                                    <span>خصم 20 %</span>
+                                                </div>
+                                                <div class="img">
+                                                    <a href="product-details.html">
+                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="pro-details mt-2">
+                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                                    <div class="d-flex flex-wrap justify-content-between specific">
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                    </div>
+                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                                            <div class="pro-card">
+                                                <div class="discount">
+                                                    <span>خصم 20 %</span>
+                                                </div>
+                                                <div class="img">
+                                                    <a href="product-details.html">
+                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="pro-details mt-2">
+                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                                    <div class="d-flex flex-wrap justify-content-between specific">
+                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                    </div>
+                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card mb-3" data-aos="fade-in">
+                            <h5 class="fw-bold border-bottom pb-2 mb-2">ملخص الطلب</h5>
+                            <form class="coupon mb-3">
+                                <label for="coupon" class="form-label text-darkGray">كوبون الخصم</label>
+                                <div class="d-flex gap-3">
+                                    <div class="input-group">
+                                        <input class="form-control" id="coupon" name="coupon" type="text">
+                                    </div>
+                                    <button class="btn btn-primary px-4">تطبيق</button>
+                                </div>
+                            </form>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>عدد المنتجات</span>
+                                <span>4 منتجات</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>المجموع الفرعي</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>السعر قبل الخصم</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>نسبه الخصم</span>
+                                <span>20%</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>السعر بعد الخصم</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>القيمة المضافه</span>
+                                <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>التوصيل</span>
+                                <span>20 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span class="fw-bold">المجموع الكلي</span>
+                                <span class="fw-bold">500 ر.س</span>
+                            </div>
+                        </div>
+                        <div class="card" data-aos="fade-up">
+                            <form>
+                                <div class="mb-3 payment-type bg-light">
+                                    <h5 class="fw-bold border-bottom pb-2 mb-2">طريقه الدفع</h5>
+                                    <div class="d-flex flex-wrap gap-3 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="remember" type="radio" id="flexCheckChecked-1" checked>
+                                            <label class="form-check-label" for="flexCheckChecked-1">
+                                                <span>كاش عند التوصيل</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="remember" type="radio" id="flexCheckChecked-2">
+                                            <label class="form-check-label" for="flexCheckChecked-2">
+                                                <span>تحويل الكتروني</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment text-center">
+                                    <button class="btn btn-primary w-100" type="button">اتمام الدفع</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

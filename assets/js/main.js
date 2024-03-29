@@ -94,7 +94,7 @@ $(function () {
       },
     },
   });
-  $("#most-requested .most-requested-carousel").owlCarousel({
+  $("#most-requested .most-requested-carousel, .related-products-carousel").owlCarousel({
     rtl: langVal,
     dots: false,
     nav: false,
