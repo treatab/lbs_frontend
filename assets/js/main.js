@@ -161,6 +161,31 @@ $(function () {
     navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
   });
 
+  $("#blog .blog-tabs-carousel").owlCarousel({
+    rtl: langVal,
+    dots: false,
+    nav: false,
+    loop: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    margin: 20,
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
+    responsive: {
+      0: {
+        items: 1.5,
+      },
+      576: {
+        items: 2.5,
+      },
+      768: {
+        items: 3.5,
+      },
+      992: {
+        items: 4.5,
+      }
+    },
+  });
+
   // verification Code
   const inputElements = [...document.querySelectorAll('input.code-input')]
   inputElements.forEach((ele, index) => {
@@ -219,6 +244,12 @@ $(function () {
 
   $('#offers #filter-btn').click(function(){
     $('#offers #filter').toggleClass('open');
+  });
+  $('#offers #filter .close-filter').click(function(){
+    $('#offers #filter').removeClass('open');
+  });
+  $(".btn-wishlist").click(function(){
+      $(this).toggleClass("liked");
   });
 
   // cart number

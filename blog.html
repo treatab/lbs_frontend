@@ -5,7 +5,7 @@
     <meta name="description" content="LBS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addresses</title>
+    <title>المدونة</title>
     <link rel="shortcut icon" href="assets/images/logo.svg">
     <!-- For English version -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
@@ -276,108 +279,150 @@
         <div class="overlay"></div>
     </section>
     <div id="main-wrapper">
-        <div id="addresses" class="py-4">
+        <div id="blog" class="py-4">
             <div class="container">
-                <div class="card" data-aos="fade-in">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center">
-                        <h5 class="fw-bold">العناوين</h5>
-                        <a href="new-address.html" class="btn btn-primary">إضافه عنوان جديد</a>
+                <div id="blog-tabs" class="mb-4">
+                    <div class="owl-carousel blog-tabs-carousel">
+                        <div class="item">
+                            <div class="blog-name active d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-name d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-name d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-name d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-name d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-name d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-name d-flex gap-2">
+                                <img src="assets/images/user.png" alt="image">
+                                <span>اسم القسم قابل للتغير</span>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div id="blog-list">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="address-card my-4">
-                                <div class="d-flex justify-content-between top-card">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="address" id="address-1" checked>
-                                        <label class="form-check-label" for="address-1">
-                                            عنوان المنزل
-                                        </label>
-                                    </div>
-                                    <div class="add-btns">
-                                        <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
-                                        <a href="#"><span><i class="far fa-trash-can"></i></span></a>
-                                    </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
                                 </div>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>العنوان</td>
-                                            <td>السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
-                                        </tr>
-                                        <tr>
-                                            <td>رقم الموبايل </td>
-                                            <td> 12345546464</td>
-                                        </tr>
-                                        <tr>
-                                            <td>اسم المستخدم</td>
-                                            <td>رحمه ابراهيم</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="address-card my-4">
-                                <div class="d-flex justify-content-between top-card">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="address" id="address-2">
-                                        <label class="form-check-label" for="address-2">
-                                            عنوان المنزل
-                                        </label>
-                                    </div>
-                                    <div class="add-btns">
-                                        <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
-                                        <a href="#"><span><i class="far fa-trash-can"></i></span></a>
-                                    </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
                                 </div>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>العنوان</td>
-                                            <td>السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
-                                        </tr>
-                                        <tr>
-                                            <td>رقم الموبايل </td>
-                                            <td> 12345546464</td>
-                                        </tr>
-                                        <tr>
-                                            <td>اسم المستخدم</td>
-                                            <td>رحمه ابراهيم</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="address-card my-4">
-                                <div class="d-flex justify-content-between top-card">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="address" id="address-3">
-                                        <label class="form-check-label" for="address-3">
-                                            عنوان المنزل
-                                        </label>
-                                    </div>
-                                    <div class="add-btns">
-                                        <a href="#" class="me-2"><span><i class="far fa-pen-to-square"></i></span></a>
-                                        <a href="#"><span><i class="far fa-trash-can"></i></span></a>
-                                    </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
                                 </div>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>العنوان</td>
-                                            <td>السعودية , حي الشيخ عبد العزيز , بيت 9 بيت 8</td>
-                                        </tr>
-                                        <tr>
-                                            <td>رقم الموبايل </td>
-                                            <td> 12345546464</td>
-                                        </tr>
-                                        <tr>
-                                            <td>اسم المستخدم</td>
-                                            <td>رحمه ابراهيم</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
+                                </div>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
+                                </div>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
+                                </div>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
+                                </div>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                            <div class="blog-card">
+                                <div class="img">
+                                    <a href="blog-details.html"><img src="assets/images/blog-img.png" alt="blog image"></a>
+                                </div>
+                                <div class="blog-details mt-2">
+                                    <h6 class="blog-title fw-bold"><a href="blog-details.html">اسم المقال قابل للتغير</a></h6>
+                                    <p class="blog-date fw-600 text-darkGray mb-1">01/05/2023</p>
+                                    <p class="blog-desc">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -458,12 +503,14 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
