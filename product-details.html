@@ -389,7 +389,7 @@
                                             <input type="button" value="+" class="qtyplus plus cart-qty-btn">
                                         </div>
                                         <div>
-                                            <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
+                                            <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#giftModal" class="btn btn-primary px-5">أضف الي السله</a>
                                         </div>
                                     </div>
                                 </div>
@@ -757,6 +757,245 @@
             </div>
         </div>
     </footer>
+    <div class="modal main-modal giftModal fade" id="giftModal" aria-hidden="true"  tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header justify-content-center border-0 p-0">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h2 class="fw-bold fs-4" >مبروك كسبت هدية </h2>
+                </div>
+                <div class="modal-body p-0 m-3">
+                    <div id="giftProducts">
+                        <div class="gift-details">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="img">
+                                        <img src="assets/images/pro-img.png" alt="product image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="product-info h-100" data-aos="fade-up">
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="discount"> <span>خصم 20 %</span> </div>
+                                        </div>
+                                        <p class="text-darkGray fw-600 mb-2">الماركه : سيمبول</p>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-1" name="input-1"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="text-darkGray fw-600 mb-2">القسم الرئيسي/القسم الفرعي/القسم الداخلي</p>
+                                        <p class="fw-600 mb-2">
+                                            <span>سعر المنتج قبل الخصم : </span>
+                                            <span>200 ر.س</span>
+                                        </p>
+                                        <p class="fw-600 mb-2">
+                                            <span>سعر المنتج بعد الخصم : </span>
+                                            <span>200 ر.س</span>
+                                        </p>
+                                        <div>
+                                            <h6 class="fw-600 mb-2">المقاسات</h6>
+                                            <ul class="d-flex flex-wrap gap-3 mb-3 list-unstyled sizes">
+                                                <li class="selected">لارج</li>
+                                                <li>متوسط</li>
+                                                <li>صغير</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
+                                            <div>
+                                                <h6 class="fw-600 mb-2">الألوان</h6>
+                                                <ul class="d-flex list-unstyled mb-0 plate">
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_1" value="1" hidden="">
+                                                        <label for="color_1"><span style="background: #202B3D;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_2" value="2" hidden="">
+                                                        <label for="color_2"><span style="background: #43AA3A;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_3" value="3" hidden="">
+                                                        <label for="color_3"><span style="background: #5992A4;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_4" value="4" hidden="">
+                                                        <label for="color_4"><span style="background: #EFA0A0;"></span></label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex flex-wrap gap-3">
+                                                <div class="quantity">
+                                                    <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                    <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                    <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="img">
+                                        <img src="assets/images/pro-img.png" alt="product image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="product-info h-100" data-aos="fade-up">
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="discount"> <span>خصم 20 %</span> </div>
+                                        </div>
+                                        <p class="text-darkGray fw-600 mb-2">الماركه : سيمبول</p>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-1" name="input-1"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="text-darkGray fw-600 mb-2">القسم الرئيسي/القسم الفرعي/القسم الداخلي</p>
+                                        <p class="fw-600 mb-2">
+                                            <span>سعر المنتج قبل الخصم : </span>
+                                            <span>200 ر.س</span>
+                                        </p>
+                                        <p class="fw-600 mb-2">
+                                            <span>سعر المنتج بعد الخصم : </span>
+                                            <span>200 ر.س</span>
+                                        </p>
+                                        <div>
+                                            <h6 class="fw-600 mb-2">المقاسات</h6>
+                                            <ul class="d-flex flex-wrap gap-3 mb-3 list-unstyled sizes">
+                                                <li class="selected">لارج</li>
+                                                <li>متوسط</li>
+                                                <li>صغير</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
+                                            <div>
+                                                <h6 class="fw-600 mb-2">الألوان</h6>
+                                                <ul class="d-flex list-unstyled mb-0 plate">
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_1" value="1" hidden="">
+                                                        <label for="color_1"><span style="background: #202B3D;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_2" value="2" hidden="">
+                                                        <label for="color_2"><span style="background: #43AA3A;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_3" value="3" hidden="">
+                                                        <label for="color_3"><span style="background: #5992A4;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_4" value="4" hidden="">
+                                                        <label for="color_4"><span style="background: #EFA0A0;"></span></label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex flex-wrap gap-3">
+                                                <div class="quantity">
+                                                    <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                    <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                    <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-details">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="img">
+                                        <img src="assets/images/pro-img.png" alt="product image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="product-info h-100" data-aos="fade-up">
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                            <h6 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h6>
+                                            <div class="discount"> <span>خصم 20 %</span> </div>
+                                        </div>
+                                        <p class="text-darkGray fw-600 mb-2">الماركه : سيمبول</p>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-1" name="input-1"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="text-darkGray fw-600 mb-2">القسم الرئيسي/القسم الفرعي/القسم الداخلي</p>
+                                        <p class="fw-600 mb-2">
+                                            <span>سعر المنتج قبل الخصم : </span>
+                                            <span>200 ر.س</span>
+                                        </p>
+                                        <p class="fw-600 mb-2">
+                                            <span>سعر المنتج بعد الخصم : </span>
+                                            <span>200 ر.س</span>
+                                        </p>
+                                        <div>
+                                            <h6 class="fw-600 mb-2">المقاسات</h6>
+                                            <ul class="d-flex flex-wrap gap-3 mb-3 list-unstyled sizes">
+                                                <li class="selected">لارج</li>
+                                                <li>متوسط</li>
+                                                <li>صغير</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
+                                            <div>
+                                                <h6 class="fw-600 mb-2">الألوان</h6>
+                                                <ul class="d-flex list-unstyled mb-0 plate">
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_1" value="1" hidden="">
+                                                        <label for="color_1"><span style="background: #202B3D;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_2" value="2" hidden="">
+                                                        <label for="color_2"><span style="background: #43AA3A;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_3" value="3" hidden="">
+                                                        <label for="color_3"><span style="background: #5992A4;"></span></label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="color" id="color_4" value="4" hidden="">
+                                                        <label for="color_4"><span style="background: #EFA0A0;"></span></label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex flex-wrap gap-3">
+                                                <div class="quantity">
+                                                    <input type="button" value="-" class="qtyminus minus cart-qty-btn">
+                                                    <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
+                                                    <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
