@@ -149,6 +149,33 @@ $(function () {
       },
     },
   });
+  $("#main-categories .main-categories-carousel").owlCarousel({
+    rtl: langVal,
+    dots: false,
+    nav: false,
+    loop: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    margin: 20,
+    navText: ["<span><i class='fas fa-chevron-left'></i></span>","<span><i class='fas fa-chevron-right'></i></span>"],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      576: {
+        items: 3,
+      },
+      768: {
+        items: 4,
+      },
+      992: {
+        items: 6,
+      },
+      1200: {
+        items: 7,
+      },
+    },
+  });
 
   $(".second-banner-carousel").owlCarousel({
     rtl: langVal,

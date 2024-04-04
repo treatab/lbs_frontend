@@ -57,7 +57,7 @@
                                     </li>
                                 </ul>
                                 <div class="text-center mb-3">
-                                    <a href="address-add.html" class="text-primary">إضافه عنوان</a>
+                                    <a href="new-address.html" class="text-primary">إضافه عنوان</a>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="top-options d-flex align-items-center gap-4">
                         <div class="notify">
-                            <a href="#"><i class="far fa-bell"></i></a>
+                            <a href="notifications.html"><i class="far fa-bell"></i></a>
                             <div class="dropdown">
                                 <ul class="list-unstyled">
                                     <li>
@@ -336,22 +336,26 @@
                                     <h5 class="pro-name fw-bold">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</h5>
                                     <div class="discount"> <span>خصم 20 %</span> </div>
                                 </div>
-                                <p class="text-darkGray fw-600 mb-2">الماركه : سيمبول</p>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-1" name="input-1"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
+                                <div class="d-flex flex-wrap justify-content-between">
+                                    <div>
+                                        <a href="brand-details.html" class="pro-brand fw-600 d-block mb-2">الماركه : سيمبول</a>
+                                        <p class="pro-sections fw-600 mb-2">
+                                            <a href="section-details.html">القسم الرئيسي/</a>
+                                            <a href="section-details.html">القسم الفرعي/</a>
+                                            <a href="section-details.html">القسم الداخلي</a>
+                                        </p>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-1" name="input-1"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 price mb-2">
+                                        <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                        <p class="mb-0 text-primary">300.00 ج.م</p>
+                                    </div>
                                 </div>
-                                <p class="text-darkGray fw-600 mb-2">القسم الرئيسي/القسم الفرعي/القسم الداخلي</p>
-                                <p class="fw-600 mb-2">
-                                    <span>سعر المنتج قبل الخصم : </span>
-                                    <span>200 ر.س</span>
-                                </p>
-                                <p class="fw-600 mb-2">
-                                    <span>سعر المنتج بعد الخصم : </span>
-                                    <span>200 ر.س</span>
-                                </p>
                                 <div>
                                     <h5 class="fw-600 mb-2">المقاسات</h5>
                                     <ul class="d-flex flex-wrap gap-3 mb-3 list-unstyled sizes">
@@ -397,185 +401,400 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews mb-4">
-                    <h5 class="text-primary border-bottom py-2 mb-2 heading-title" data-aos="zoom-in">
-                        <span>التقييمات</span>
-                    </h5>
-                    <div class="review-card mb-3" data-aos="fade-up">
-                        <div class="d-flex gap-3">
-                            <div class="img">
-                                <img src="assets/images/user.png" alt="user image">
-                            </div>
-                            <div class="review-body">
-                                <div>
-                                    <span class="fw-600 me-3">اسم المستخدم</span>
-                                    <span class="date text-dark">01/05/2021</span>
+                <div class="pro-tabs mb-4">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="true">
+                              <span>التقييمات</span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="product-desc-tab" data-bs-toggle="tab" data-bs-target="#product-desc" type="button" role="tab" aria-controls="product-desc" aria-selected="false">
+                              <span>الوصف</span>
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+                            <div class="reviews">
+                                <div class="review-card mb-3" data-aos="fade-up">
+                                    <div class="d-flex gap-3">
+                                        <div class="img">
+                                            <img src="assets/images/user.png" alt="user image">
+                                        </div>
+                                        <div class="review-body">
+                                            <div>
+                                                <span class="fw-600 me-3">اسم المستخدم</span>
+                                                <span class="date text-dark">01/05/2021</span>
+                                            </div>
+                                            <div class="rating-pro clearfix mb-2">
+                                                <input id="input-21" name="input-21"
+                                                    class="rating rating-loading" value="5" data-min="0"
+                                                    data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                <!-- for arabic-ver dir="rtl" -->
+                                            </div>
+                                            <p class="fw-600">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
+                                <div class="review-card mb-3" data-aos="fade-up">
+                                    <div class="d-flex gap-3">
+                                        <div class="img">
+                                            <img src="assets/images/user.png" alt="user image">
+                                        </div>
+                                        <div class="review-body">
+                                            <div>
+                                                <span class="fw-600 me-3">اسم المستخدم</span>
+                                                <span class="date text-dark">01/05/2021</span>
+                                            </div>
+                                            <div class="rating-pro clearfix mb-2">
+                                                <input id="input-22" name="input-22"
+                                                    class="rating rating-loading" value="5" data-min="0"
+                                                    data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                <!-- for arabic-ver dir="rtl" -->
+                                            </div>
+                                            <p class="fw-600">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="fw-600">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="review-card mb-3" data-aos="fade-up">
-                        <div class="d-flex gap-3">
-                            <div class="img">
-                                <img src="assets/images/user.png" alt="user image">
-                            </div>
-                            <div class="review-body">
-                                <div>
-                                    <span class="fw-600 me-3">اسم المستخدم</span>
-                                    <span class="date text-dark">01/05/2021</span>
-                                </div>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-22" name="input-22"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="fw-600">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا </p>
-                            </div>
+                        <div class="tab-pane fade" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab">
+                            <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا</p>
+                            <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا</p>
                         </div>
-                    </div>
+                      </div>
                 </div>
                 <div class="related-products mb-4">
                     <h5 class="fw-bold mb-3" data-aos="fade-in">منتجات مشابهه</h5>
                     <div id="products-list">
                         <div class="owl-carousel related-products-carousel" data-aos="fade-up">
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="item h-100">
-                                <div class="pro-card h-100 my-2 mx-1">
-                                    <div class="discount">
-                                        <span>خصم 20 %</span>
-                                    </div>
-                                    <div class="img">
-                                        <a href="product-details.html">
-                                            <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="pro-details mt-2">
-                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                        <p class="mb-2">نوع البراند</p>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                                            <p class="mb-0">350.00 ج.م</p>
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
                                         </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
                                     </div>
                                 </div>
                             </div>
@@ -683,6 +902,9 @@
                 </div>
             </div>
         </div>
+        <div class="share-product">
+            <a href="#"><i class="fas fa-share"></i></a>
+        </div>
     </div>
     <footer>
         <div id="footer">
@@ -692,7 +914,7 @@
                         <div class="footer-logo text-center mb-3 text-xl-start">
                             <img src="assets/images/logo-white.svg" alt="logo image">
                         </div>
-                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-between justify-content-sm-center gap-3">
+                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-center gap-3">
                             <div class="d-flex align-items-center gap-2 mb-lg-2">
                                 <span>01012345600</span>
                                 <i class="fa-brands fa-whatsapp"></i>
@@ -770,7 +992,7 @@
                     <div id="giftProducts">
                         <div class="gift-details">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-3 mb-lg-0">
                                     <div class="img">
                                         <img src="assets/images/pro-img.png" alt="product image">
                                     </div>
@@ -832,9 +1054,6 @@
                                                     <input type="button" value="-" class="qtyminus minus cart-qty-btn">
                                                     <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                     <input type="button" value="+" class="qtyplus plus cart-qty-btn">
-                                                </div>
-                                                <div>
-                                                    <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -844,7 +1063,7 @@
                         </div>
                         <div class="gift-details">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-3 mb-lg-0">
                                     <div class="img">
                                         <img src="assets/images/pro-img.png" alt="product image">
                                     </div>
@@ -906,9 +1125,6 @@
                                                     <input type="button" value="-" class="qtyminus minus cart-qty-btn">
                                                     <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                     <input type="button" value="+" class="qtyplus plus cart-qty-btn">
-                                                </div>
-                                                <div>
-                                                    <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -918,7 +1134,7 @@
                         </div>
                         <div class="gift-details">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-3 mb-lg-0">
                                     <div class="img">
                                         <img src="assets/images/pro-img.png" alt="product image">
                                     </div>
@@ -981,15 +1197,15 @@
                                                     <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                     <input type="button" value="+" class="qtyplus plus cart-qty-btn">
                                                 </div>
-                                                <div>
-                                                    <a href="#" class="btn btn-primary px-5">أضف الي السله</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary px-5 mt-5 w-lg-75 w-100">الحصول على الهديه</a>
                     </div>
                 </div>
             </div>

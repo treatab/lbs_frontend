@@ -5,7 +5,7 @@
     <meta name="description" content="LBS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عنوان جديد</title>
+    <title>الاشعارات</title>
     <link rel="shortcut icon" href="assets/images/logo.svg">
     <!-- For English version -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">  -->
@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
@@ -276,86 +279,51 @@
         <div class="overlay"></div>
     </section>
     <div id="main-wrapper">
-        <div id="addresses" class="py-4">
+        <div id="notifications-list" class="py-4">
             <div class="container">
-                <div class="card" data-aos="fade-in">
-                    <h5 class="fw-bold mb-4">إضافه عنوان جديد</h5>
-                    <form id="new-address">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="user-name">اسم العميل باللغه الانجليزيه</label>
-                                    <input type="text" id="user-name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="phone">رقم الجوال</label>
-                                    <input type="text" id="phone" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label text-darkGray" for="country">اسم الدولة</label>
-                                    <select class="form-select" id="country">
-                                        <option selected>اختر</option>
-                                        <option value="1">مصر</option>
-                                        <option value="2">السعودية</option>
-                                        <option value="3">الإمارات</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="area">اسم المنطفة</label>
-                                    <select class="form-select" id="area">
-                                        <option selected>اختر</option>
-                                        <option value="1">مصر</option>
-                                        <option value="2">السعودية</option>
-                                        <option value="3">الإمارات</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="city">اسم المدينة</label>
-                                    <select class="form-select" id="city">
-                                        <option selected>اختر</option>
-                                        <option value="1">مصر</option>
-                                        <option value="2">السعودية</option>
-                                        <option value="3">الإمارات</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="block-name">اسم الحي</label>
-                                    <input type="text" id="block-name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="street-name">اسم الشارع</label>
-                                    <input type="text" id="street-name" class="form-control">
-                                </div>
-                                <div>
-                                    <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#mapModal" class="d-block text-center bg-darkGray w-100 p-2 mb-3 rounded-3 btn-map">تحديد العنوان من علي الخريطه</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-input mb-3">
-                                    <label class="form-label text-darkGray" for="address-details">كتابه العنوان بالتفصيل</label>
-                                    <textarea name="address" id="address-details" class="form-control" rows="4"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mt-3">
-                                <button class="btn btn-primary w-100">إضافه</button>
-                            </div>
-                            <div class="col-md-6 mt-3">
-                                <a href="addresses.html" class="btn btn-outline-dark w-100">إلغاء</a>
-                            </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 item read">
+                    <div class="d-flex align-items-center confirmed">
+                        <div class="icon">
+                            <i class="far fa-bell"></i>
                         </div>
-                    </form>
+                        <p>تم تأكيد الحجز</p>
+                    </div>
+                    <div class="date">
+                        <p>منذ ساعه</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 item read">
+                    <div class="d-flex align-items-center canceled">
+                        <div class="icon">
+                            <i class="far fa-bell"></i>
+                        </div>
+                        <p>تم الغاء الحجز</p>
+                    </div>
+                    <div class="date">
+                        <p>منذ دقيقه</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 item">
+                    <div class="d-flex align-items-center pending">
+                        <div class="icon">
+                            <i class="far fa-bell"></i>
+                        </div>
+                        <p>جاري عمل الحجز</p>
+                    </div>
+                    <div class="date">
+                        <p>منذ يومين</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 item">
+                    <div class="d-flex align-items-center completed">
+                        <div class="icon">
+                            <i class="far fa-bell"></i>
+                        </div>
+                        <p>تم انهاء الحجز</p>
+                    </div>
+                    <div class="date">
+                        <p>منذ 3 اسابيع</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -433,40 +401,14 @@
             </div>
         </div>
     </footer>
-
-    <div class="modal main-modal mapModal fade" id="mapModal" aria-hidden="true"  tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content border-0">
-                <div class="modal-header justify-content-center border-0 p-0">
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="modal-body p-0 m-3">
-                    <div class="input-search">
-                        <span class="icon"><i class="fas fa-search fa-xs"></i></span>
-                        <input type="text" placeholder="ابحث عن منطقتك" id="map-search">
-                    </div>
-                    <div id="map"></div>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <button class="btn btn-primary w-100">تأكيد</button>
-                        </div>
-                        <div class="col-6">
-                            <button data-bs-dismiss="modal" aria-label="Close" class="btn btn-outline-dark w-100">إلغاء</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="assets/js/map.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.1.2/themes/krajee-fas/theme.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

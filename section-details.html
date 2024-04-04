@@ -54,7 +54,7 @@
                                     </li>
                                 </ul>
                                 <div class="text-center mb-3">
-                                    <a href="address-add.html" class="text-primary">إضافه عنوان</a>
+                                    <a href="new-address.html" class="text-primary">إضافه عنوان</a>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="top-options d-flex align-items-center gap-4">
                         <div class="notify">
-                            <a href="#"><i class="far fa-bell"></i></a>
+                            <a href="notifications.html"><i class="far fa-bell"></i></a>
                             <div class="dropdown">
                                 <ul class="list-unstyled">
                                     <li>
@@ -303,379 +303,689 @@
         <div id="dept-products" class="py-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
-                                </div>
+                    <div class="col-lg-3">
+                        <div id="filter-btn" class="text-dark mb-3 d-block d-lg-none">
+                            <i class="fas fa-filter"></i>
+                            <span>filter</span>
+                        </div>
+                        <div id="filter" data-aos="fade-in">
+                            <div class="close-filter d-block d-lg-none text-end">
+                                <i class="fas fa-times"></i>
                             </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
+                            <div class="accordion" id="filterAccordion">
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CategoryCollapse" aria-expanded="true" aria-controls="CategoryCollapse">
+                                            الاقسام الرئيسية
+                                        </button>
+                                    </h2>
+                                    <div id="CategoryCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-1">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+                                                <label class="form-check-label" for="flexCheckChecked">اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked-2">
+                                                <label class="form-check-label" for="flexCheckChecked"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked-3">
+                                                <label class="form-check-label" for="flexCheckChecked">اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked-4">
+                                                <label class="form-check-label" for="flexCheckChecked">اسم القسم قابل للتغير</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-2">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#subCatCollapse" aria-expanded="false" aria-controls="subCatCollapse">
+                                            الاقسام الفرعية
+                                        </button>
+                                    </h2>
+                                    <div id="subCatCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-2">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="subCatCheckChecked" checked="">
+                                                <label class="form-check-label" for="subCatCheckChecked"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="subCatCheckChecked2">
+                                                <label class="form-check-label" for="subCatCheckChecked2"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="subCatCheckChecked3">
+                                                <label class="form-check-label" for="subCatCheckChecked3"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-3">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#enterCatCollapse" aria-expanded="false" aria-controls="enterCatCollapse">
+                                            الاقسام الفرعية
+                                        </button>
+                                    </h2>
+                                    <div id="enterCatCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-3">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="enterCatCheckChecked" checked="">
+                                                <label class="form-check-label" for="enterCatCheckChecked"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="enterCatCheckChecked2">
+                                                <label class="form-check-label" for="enterCatCheckChecked2"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="enterCatCheckChecked3">
+                                                <label class="form-check-label" for="enterCatCheckChecked3"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-4">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#BrandCollapse" aria-expanded="false" aria-controls="BrandCollapse">
+                                            الماركه
+                                        </button>
+                                    </h2>
+                                    <div id="BrandCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-4">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="brandCheckChecked" checked="">
+                                                <label class="form-check-label" for="brandCheckChecked"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="brandCheckChecked2">
+                                                <label class="form-check-label" for="brandCheckChecked2"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="brandCheckChecked3">
+                                                <label class="form-check-label" for="brandCheckChecked3"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="brandCheckChecked4"> 
+                                                    <label class="form-check-label" for="brandCheckChecked4"> اسم القسم قابل للتغير</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-5">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colorCollapse" aria-expanded="false" aria-controls="colorCollapse">
+                                            الالوان
+                                        </button>
+                                    </h2>
+                                    <div id="colorCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-5">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="colorCheckChecked" checked="">
+                                                <label class="form-check-label" for="colorCheckChecked"> أحمر </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="colorCheckChecked2">
+                                                <label class="form-check-label" for="colorCheckChecked2"> أحمر </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="colorCheckChecked3">
+                                                <label class="form-check-label" for="colorCheckChecked3"> أحمر </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="colorCheckChecked4"> 
+                                                    <label class="form-check-label" for="colorCheckChecked4"> أحمر </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-6">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sizeCollapse" aria-expanded="false" aria-controls="sizeCollapse">
+                                            المقاس
+                                        </button>
+                                    </h2>
+                                    <div id="sizeCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-6">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="sizeCheckChecked" checked="">
+                                                <label class="form-check-label" for="sizeCheckChecked"> لأرج </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="sizeCheckChecked2">
+                                                <label class="form-check-label" for="sizeCheckChecked2"> متوسط </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="sizeCheckChecked3">
+                                                <label class="form-check-label" for="sizeCheckChecked3"> متوسط </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="colorCheckChecked4"> 
+                                                    <label class="form-check-label" for="colorCheckChecked4"> متوسط </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-7">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceCollapse" aria-expanded="false" aria-controls="priceCollapse">
+                                            السعر
+                                        </button>
+                                    </h2>
+                                    <div id="priceCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-7">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="priceCheckChecked" checked="">
+                                                <label class="form-check-label" for="priceCheckChecked"> 100-200 ر.س </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="priceCheckChecked2">
+                                                <label class="form-check-label" for="priceCheckChecked2"> 100-200 ر.س</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="priceCheckChecked3">
+                                                <label class="form-check-label" for="priceCheckChecked3"> 100-200 ر.س</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="priceCheckChecked4"> 
+                                                    <label class="form-check-label" for="priceCheckChecked4"> 100-200 ر.س</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="heading-8">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ratingCollapse" aria-expanded="false" aria-controls="ratingCollapse">
+                                            التقييمات
+                                        </button>
+                                    </h2>
+                                    <div id="ratingCollapse" class="accordion-collapse collapse show" aria-labelledby="heading-8">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="rateCheckChecked" checked>
+                                                <label class="form-check-label" for="rateCheckChecked">
+                                                    <div class="rating-pro clearfix">
+                                                        <input id="input-21" name="input-21"
+                                                            class="rating rating-loading" value="5" data-min="0"
+                                                            data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                        <!-- for arabic-ver dir="rtl" -->
+                                                    </div> </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="rateCheckChecked2">
+                                                <label class="form-check-label" for="rateCheckChecked2">
+                                                    <div class="rating-pro clearfix">
+                                                        <input id="input-21" name="input-21"
+                                                            class="rating rating-loading" value="4" data-min="0"
+                                                            data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                        <!-- for arabic-ver dir="rtl" -->
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="rateCheckChecked3">
+                                                <label class="form-check-label" for="rateCheckChecked3">
+                                                    <div class="rating-pro clearfix">
+                                                        <input id="input-21" name="input-21"
+                                                            class="rating rating-loading" value="3" data-min="0"
+                                                            data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                        <!-- for arabic-ver dir="rtl" -->
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="rateCheckChecked4"> 
+                                                <label class="form-check-label" for="rateCheckChecked4">
+                                                    <div class="rating-prorder clearfix">
+                                                        <input id="input-21" name="input-21"
+                                                            class="rating rating-loading" value="2" data-min="0"
+                                                            data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                        <!-- for arabic-ver dir="rtl" -->
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="rateCheckChecked5"> 
+                                                <label class="form-check-label" for="rateCheckChecked5">
+                                                    <div class="rating-prorder clearfix">
+                                                        <input id="input-21" name="input-21"
+                                                            class="rating rating-loading" value="1" data-min="0"
+                                                            data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                                        <!-- for arabic-ver dir="rtl" -->
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
-                                </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
-                                </div>
-                            </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
-                                </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
-                                </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
-                                </div>
-                            </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
-                                </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
-                                </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
-                                </div>
-                            </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
-                                </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
-                                </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="pro-card h-100" data-aos="fade-up">
-                            <div class="pro-header">
-                                <div class="btn-wishlist"><i class="far fa-heart"></i></div>
-                                <div class="img">
-                                    <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pro-body mt-3">
-                                <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                <div class="rating-pro clearfix mb-2">
-                                    <input id="input-21" name="input-21"
-                                        class="rating rating-loading" value="5" data-min="0"
-                                        data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
-                                    <!-- for arabic-ver dir="rtl" -->
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
                                 </div>
-                                <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
-                                <ul class="d-flex list-unstyled mb-0 plate">
-                                    <li class="red">
-                                        <input type="radio" name="color" id="color_1" value="1" hidden>
-                                        <label for="color_1"><span style="background: #911E1E;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_2" value="2" hidden>
-                                        <label for="color_2"><span style="background: #591F93;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_3" value="3" hidden>
-                                        <label for="color_3"><span style="background: #6E127D;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_4" value="4" hidden>
-                                        <label for="color_4"><span style="background: #3D4366;"></span></label>
-                                    </li>
-                                    <li class="green">
-                                        <input type="radio" name="color" id="color_5" value="5" hidden>
-                                        <label for="color_5"><span style="background: #000000;"></span></label>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
-                                    <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
-                                    <p class="mb-0 text-primary">300.00 ج.م</p>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
                                 </div>
-                                <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="pro-card h-100" data-aos="fade-up">
+                                    <div class="pro-header">
+                                        <div class="btn-wishlist"><i class="far fa-heart"></i></div>
+                                        <div class="img">
+                                            <a href="#"><img src="assets/images/pro-img.png" alt="product image"></a>
+                                        </div>
+                                    </div>
+                                    <div class="pro-body mt-3">
+                                        <h6 class="pro-name fw-bold"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
+                                        <div class="rating-pro clearfix mb-2">
+                                            <input id="input-21" name="input-21"
+                                                class="rating rating-loading" value="5" data-min="0"
+                                                data-max="5" data-step="0.1" data-theme="krajee-fas" dir="rtl" disabled>
+                                            <!-- for arabic-ver dir="rtl" -->
+                                        </div>
+                                        <p class="pro-desc text-darkGray mb-2">نايكي -القسم الرئيسي - القسم الفرعي-القسم الداخلي</p>
+                                        <ul class="d-flex list-unstyled mb-0 plate">
+                                            <li class="red">
+                                                <input type="radio" name="color" id="color_1" value="1" hidden>
+                                                <label for="color_1"><span style="background: #911E1E;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_2" value="2" hidden>
+                                                <label for="color_2"><span style="background: #591F93;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_3" value="3" hidden>
+                                                <label for="color_3"><span style="background: #6E127D;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_4" value="4" hidden>
+                                                <label for="color_4"><span style="background: #3D4366;"></span></label>
+                                            </li>
+                                            <li class="green">
+                                                <input type="radio" name="color" id="color_5" value="5" hidden>
+                                                <label for="color_5"><span style="background: #000000;"></span></label>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex flex-wrap justify-content-between gap-2 price mb-2">
+                                            <p class="old mb-0 text-darkGray text-decoration-line-through">350.00 ج.م</p>
+                                            <p class="mb-0 text-primary">300.00 ج.م</p>
+                                        </div>
+                                        <button class="btn btn-primary btn-add-to-card w-100">أضف الي السلة</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -691,7 +1001,7 @@
                         <div class="footer-logo text-center mb-3 text-xl-start">
                             <img src="assets/images/logo-white.svg" alt="logo image">
                         </div>
-                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-between justify-content-sm-center gap-3">
+                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-center gap-3">
                             <div class="d-flex align-items-center gap-2 mb-lg-2">
                                 <span>01012345600</span>
                                 <i class="fa-brands fa-whatsapp"></i>

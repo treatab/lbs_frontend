@@ -51,7 +51,7 @@
                                     </li>
                                 </ul>
                                 <div class="text-center mb-3">
-                                    <a href="address-add.html" class="text-primary">إضافه عنوان</a>
+                                    <a href="new-address.html" class="text-primary">إضافه عنوان</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="top-options d-flex align-items-center gap-4">
                         <div class="notify">
-                            <a href="#"><i class="far fa-bell"></i></a>
+                            <a href="notifications.html"><i class="far fa-bell"></i></a>
                             <div class="dropdown">
                                 <ul class="list-unstyled">
                                     <li>
@@ -310,7 +310,9 @@
                             <div class="mb-3">
                                 <div class="validate-input form-check order-2 order-sm-1">
                                     <input class="form-check-input checkInput" name="remember" type="checkbox" value="1" id="flexCheckChecked-1">
-                                    <label class="form-check-label fw-bold" for="flexCheckChecked-1"> الموافقة علي الشروط والاحكام </label>
+                                    <label class="form-check-label fw-bold" for="flexCheckChecked-1"> 
+                                        <a href="javascript:void()" data-bs-toggle="modal" data-bs-target="#termsModal" class="text-decoration-underline">الموافقة علي الشروط والاحكام</a>
+                                    </label>
                                 </div>
                             </div>
                             <a href="verification.html" class="btn btn-primary w-100">إنشاء حساب جديد</a>
@@ -347,7 +349,7 @@
                         <div class="footer-logo text-center mb-3 text-xl-start">
                             <img src="assets/images/logo-white.svg" alt="logo image">
                         </div>
-                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-between justify-content-sm-center gap-3">
+                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-center gap-3">
                             <div class="d-flex align-items-center gap-2 mb-lg-2">
                                 <span>01012345600</span>
                                 <i class="fa-brands fa-whatsapp"></i>
@@ -412,6 +414,24 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal main-modal termsModal fade" id="termsModal" aria-hidden="true"  tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header justify-content-center border-0 p-0">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-0 m-3">
+                    <div class="text-center">
+                        <h5 class="fw-bold mb-3">الشروط والاحكام</h5>
+                        <p>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار، أو أي كلمات أو عبارات غير لائقة أو ما شابه. وهذا ما يجعله أول مولّد نص لوريم إيبسوم حقيقي على الإنترنت.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>

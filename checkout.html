@@ -51,7 +51,7 @@
                                     </li>
                                 </ul>
                                 <div class="text-center mb-3">
-                                    <a href="address-add.html" class="text-primary">إضافه عنوان</a>
+                                    <a href="new-address.html" class="text-primary">إضافه عنوان</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="top-options d-flex align-items-center gap-4">
                         <div class="notify">
-                            <a href="#"><i class="far fa-bell"></i></a>
+                            <a href="notifications.html"><i class="far fa-bell"></i></a>
                             <div class="dropdown">
                                 <ul class="list-unstyled">
                                     <li>
@@ -279,7 +279,7 @@
         <div id="checkout" class="py-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 mb-3 mb-lg-0">
+                    <div class="col-lg-8 mb-3 mb-lg-0">
                         <div class="card">
                             <h6 class="fw-bold border-bottom pb-2 mb-2 cart-title">
                                 <a href="cart.html">
@@ -355,155 +355,179 @@
                                     <p class="fw-bold mb-0">طلبك</ح>
                                     <p class="fw-bold mb-0">5 منتجات</p>
                                 </div>
-                                <div id="products-list">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
-                                            <div class="pro-card">
-                                                <div class="discount">
-                                                    <span>خصم 20 %</span>
-                                                </div>
-                                                <div class="img">
-                                                    <a href="product-details.html">
-                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                                    </a>
-                                                </div>
-                                                <div class="pro-details mt-2">
-                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                                    <div class="d-flex flex-wrap justify-content-between specific">
-                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
-                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                <div class="order-items">
+                                    <div class="item" data-aos="fade-up">
+                                        <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                            <div class="img">
+                                                <img src="assets/images/pro-img.png" alt="product image">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="d-sm-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-2">
+                                                    <div class="text-center text-sm-start">
+                                                        <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                        <div class="pro-details d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-2">
+                                                            <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                            <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                            <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        </div>
                                                     </div>
                                                     <div class="quantity">
                                                         <input type="button" value="-" class="qtyminus minus cart-qty-btn">
                                                         <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                         <input type="button" value="+" class="qtyplus plus cart-qty-btn">
                                                     </div>
-                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                    <div class="text-center text-sm-end fw-600">
+                                                        <div class="price mb-sm-2">
+                                                            <span> 200 ر.س</span>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <span class="text-red me-1 discount">خصم 20%</span>
+                                                            <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="delete-btn"><i class="fas fa-trash-can"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
-                                            <div class="pro-card">
-                                                <div class="discount">
-                                                    <span>خصم 20 %</span>
-                                                </div>
-                                                <div class="img">
-                                                    <a href="product-details.html">
-                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                                    </a>
-                                                </div>
-                                                <div class="pro-details mt-2">
-                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                                    <div class="d-flex flex-wrap justify-content-between specific">
-                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
-                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                    </div>
+                                    <div class="item gift" data-aos="fade-up">
+                                        <h6 class="fw-600">الهدية</h6>
+                                        <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                            <div class="img">
+                                                <img src="assets/images/pro-img.png" alt="product image">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="d-sm-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-2">
+                                                    <div class="text-center text-sm-start">
+                                                        <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                        <div class="pro-details d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-2">
+                                                            <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                            <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                            <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        </div>
                                                     </div>
                                                     <div class="quantity">
-                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
-                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
-                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
+                                                        <span>1</span>
                                                     </div>
-                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                    <div class="text-center text-sm-end fw-600">
+                                                        <div class="price mb-sm-2">
+                                                            <span> 200 ر.س</span>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <span class="text-red me-1 discount">خصم 20%</span>
+                                                            <span class="old-price text-decoration-line-through"> 200 ر.س</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
-                                            <div class="pro-card">
-                                                <div class="discount">
-                                                    <span>خصم 20 %</span>
-                                                </div>
-                                                <div class="img">
-                                                    <a href="product-details.html">
-                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                                    </a>
-                                                </div>
-                                                <div class="pro-details mt-2">
-                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                                    <div class="d-flex flex-wrap justify-content-between specific">
-                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
-                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                    </div>
+                                    <div class="item" data-aos="fade-up">
+                                        <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                            <div class="img">
+                                                <img src="assets/images/pro-img.png" alt="product image">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="d-sm-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-2">
+                                                    <div class="text-center text-sm-start">
+                                                        <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                        <div class="pro-details d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-2">
+                                                            <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                            <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                            <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        </div>
                                                     </div>
                                                     <div class="quantity">
                                                         <input type="button" value="-" class="qtyminus minus cart-qty-btn">
                                                         <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                         <input type="button" value="+" class="qtyplus plus cart-qty-btn">
                                                     </div>
-                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                    <div class="text-center text-sm-end fw-600">
+                                                        <div class="price mb-sm-2">
+                                                            <span> 200 ر.س</span>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <span class="text-red me-1 discount">خصم 20%</span>
+                                                            <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="delete-btn"><i class="fas fa-trash-can"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
-                                            <div class="pro-card">
-                                                <div class="discount">
-                                                    <span>خصم 20 %</span>
-                                                </div>
-                                                <div class="img">
-                                                    <a href="product-details.html">
-                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                                    </a>
-                                                </div>
-                                                <div class="pro-details mt-2">
-                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                                    <div class="d-flex flex-wrap justify-content-between specific">
-                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
-                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                    </div>
+                                    <div class="item" data-aos="fade-up">
+                                        <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                            <div class="img">
+                                                <img src="assets/images/pro-img.png" alt="product image">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="d-sm-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-2">
+                                                    <div class="text-center text-sm-start">
+                                                        <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                        <div class="pro-details d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-2">
+                                                            <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                            <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                            <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        </div>
                                                     </div>
                                                     <div class="quantity">
                                                         <input type="button" value="-" class="qtyminus minus cart-qty-btn">
                                                         <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                         <input type="button" value="+" class="qtyplus plus cart-qty-btn">
                                                     </div>
-                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                    <div class="text-center text-sm-end fw-600">
+                                                        <div class="price mb-sm-2">
+                                                            <span> 200 ر.س</span>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <span class="text-red me-1 discount">خصم 20%</span>
+                                                            <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="delete-btn"><i class="fas fa-trash-can"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
-                                            <div class="pro-card">
-                                                <div class="discount">
-                                                    <span>خصم 20 %</span>
-                                                </div>
-                                                <div class="img">
-                                                    <a href="product-details.html">
-                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                                    </a>
-                                                </div>
-                                                <div class="pro-details mt-2">
-                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                                    <div class="d-flex flex-wrap justify-content-between specific">
-                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
-                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
-                                                    </div>
-                                                    <div class="quantity">
-                                                        <input type="button" value="-" class="qtyminus minus cart-qty-btn">
-                                                        <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
-                                                        <input type="button" value="+" class="qtyplus plus cart-qty-btn">
-                                                    </div>
-                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
-                                                </div>
+                                    </div>
+                                    <div class="item" data-aos="fade-up">
+                                        <div class="d-sm-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                                            <div class="img">
+                                                <img src="assets/images/pro-img.png" alt="product image">
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
-                                            <div class="pro-card">
-                                                <div class="discount">
-                                                    <span>خصم 20 %</span>
-                                                </div>
-                                                <div class="img">
-                                                    <a href="product-details.html">
-                                                        <img src="assets/images/pro-img.png" alt="product image" class="img-fluid">
-                                                    </a>
-                                                </div>
-                                                <div class="pro-details mt-2">
-                                                    <h6 class="pro-name fw-600 text-center"><a href="product-details.html">بلوزه سوداء شبابيه</a></h6>
-                                                    <div class="d-flex flex-wrap justify-content-between specific">
-                                                        <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
-                                                        <p class="mb-0"><span>اللون : </span><span>كحلي</span></p>
+                                            <div class="flex-grow-1">
+                                                <div class="d-sm-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-2">
+                                                    <div class="text-center text-sm-start">
+                                                        <div class="pro-name fw-bold mb-2">تيشيرت رجالي مقاس عادي مطبوع من سيمبول</div>
+                                                        <div class="pro-details d-sm-flex flex-wrap justify-content-center justify-content-md-start gap-2 mb-2">
+                                                            <p class="mb-0"><span>الماركه : </span><span>سيمبول</span></p>
+                                                            <p class="mb-0"><span>اللون : </span><span>كحلي</span><span class="color" style="background: #202B3D;"></span></p>
+                                                            <p class="mb-0"><span>المقاس : </span><span>لارج</span></p>
+                                                        </div>
                                                     </div>
                                                     <div class="quantity">
                                                         <input type="button" value="-" class="qtyminus minus cart-qty-btn">
                                                         <input type="text" name="quantity" data-id="443" readonly="" value="1" class="qty cart-qty-input">
                                                         <input type="button" value="+" class="qtyplus plus cart-qty-btn">
                                                     </div>
-                                                    <p class="text-primary text-center fw-600 mb-0">350.00 ج.م</p>
+                                                    <div class="text-center text-sm-end fw-600">
+                                                        <div class="price mb-sm-2">
+                                                            <span> 200 ر.س</span>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <span class="text-red me-1 discount">خصم 20%</span>
+                                                            <span class="text-darkGray text-decoration-line-through"> 200 ر.س</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#" class="delete-btn"><i class="fas fa-trash-can"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -512,7 +536,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-4">
                         <div class="card mb-3" data-aos="fade-in">
                             <h5 class="fw-bold border-bottom pb-2 mb-2">ملخص الطلب</h5>
                             <form class="coupon mb-3">
@@ -535,6 +559,14 @@
                             <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
                                 <span>السعر قبل الخصم</span>
                                 <span>500 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>خصم العروض</span>
+                                <span>10 ر.س</span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
+                                <span>خصم الكوبون</span>
+                                <span>30 ر.س</span>
                             </div>
                             <div class="d-flex flex-wrap justify-content-between mb-3 fw-600">
                                 <span>نسبه الخصم</span>
@@ -594,7 +626,7 @@
                         <div class="footer-logo text-center mb-3 text-xl-start">
                             <img src="assets/images/logo-white.svg" alt="logo image">
                         </div>
-                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-between justify-content-sm-center gap-3">
+                        <div class="contact-us d-xl-block d-flex align-items-center justify-content-center gap-3">
                             <div class="d-flex align-items-center gap-2 mb-lg-2">
                                 <span>01012345600</span>
                                 <i class="fa-brands fa-whatsapp"></i>
