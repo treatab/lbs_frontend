@@ -2034,6 +2034,8 @@ footer{
                 font-size: 14px;
             }
             .img{
+                width: fit-content;
+                margin: 0 auto;
                 text-align: center;
                 background-color: map_get($theme-colors, lightgray);
                 border-radius: 10px;
@@ -2127,6 +2129,23 @@ footer{
             text-align: center;
             max-width: 45px;
             background: transparent;
+        }
+    }
+}
+
+#checkout {
+    .order-items {
+        .item {
+            .quantity {
+                display: block;
+                width: 60px;
+                text-align: center;
+            }
+            &.gift {
+                .quantity {
+                    width: 60px;
+                }
+            }
         }
     }
 }
